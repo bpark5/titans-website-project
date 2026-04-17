@@ -37,6 +37,10 @@ export class TitansWebsiteProfilePicture extends DDDSuper(I18NMixin(LitElement))
         :host {
             display:block;
         }
+
+        .user-information {
+            background-color: var(--ddd-)
+        }
       
     `];
     }

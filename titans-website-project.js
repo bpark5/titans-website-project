@@ -70,10 +70,11 @@ export class TitansWebsiteProject extends DDDSuper(I18NMixin(LitElement)) {
 
   render() {
     return html`
-<div class="wrapper">
-  <h3><span>${this.t.title}:</span> ${this.title}</h3>
-  <slot></slot>
-</div>`;
+    <div class="wrapper">
+        <titans-website-profile-picture>
+          
+        </titans-website-profile-picture>
+    </div>`;
   }
 }
 
