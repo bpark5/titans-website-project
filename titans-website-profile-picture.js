@@ -20,12 +20,14 @@ export class TitansWebsiteProfilePicture extends DDDSuper(I18NMixin(LitElement))
 
     constructor() {
         super();
+        this.username = "";
     }
 
     static get properties() {
         return {
             ...super.properties,
             title: { type: String },
+            username: {type: String},
         };
     }
 
@@ -41,6 +43,9 @@ export class TitansWebsiteProfilePicture extends DDDSuper(I18NMixin(LitElement))
 
     render() {
         return html`
+        <div class="user-information">
+            <span>${this.username}</span>
+        </div>
 
         `;
     }

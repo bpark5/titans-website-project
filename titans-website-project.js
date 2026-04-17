@@ -26,12 +26,6 @@ export class TitansWebsiteProject extends DDDSuper(I18NMixin(LitElement)) {
       ...this.t,
       title: "Title",
     };
-    this.registerLocalization({
-      context: this,
-      localesPath:
-        new URL("./locales/titans-website-project.ar.json", import.meta.url).href +
-        "/../",
-    });
   }
 
   // Lit reactive properties
@@ -65,10 +59,10 @@ export class TitansWebsiteProject extends DDDSuper(I18NMixin(LitElement)) {
   // Lit render the HTML
   render() {
     return html`
-<div class="wrapper">
-  <h3><span>${this.t.title}:</span> ${this.title}</h3>
-  <slot></slot>
-</div>`;
+    <div class="wrapper">
+      <h3><span>${this.t.title}:</span> ${this.title}</h3>
+      <slot></slot>
+    </div>`;
   }
 
 }
