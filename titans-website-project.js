@@ -6,29 +6,28 @@ import { LitElement, html, css } from "lit";
 import { DDDSuper } from "@haxtheweb/d-d-d/d-d-d.js";
 import { I18NMixin } from "@haxtheweb/i18n-manager/lib/I18NMixin.js";
 
+import "./titans-website-pics.js";
+import "./titans-website-stats.js";
+import "./titans-website-socials.js";
+import "./titans-website-contacts.js";
+import "./titans-website-footer.js";
+
 /**
  * `titans-website-project`
- * 
+ *
  * @demo index.html
  * @element titans-website-project
  */
 export class TitansWebsiteProject extends DDDSuper(I18NMixin(LitElement)) {
-
   static get tag() {
     return "titans-website-project";
   }
 
   constructor() {
     super();
-    this.title = "";
-    this.t = this.t || {};
-    this.t = {
-      ...this.t,
-      title: "Title",
-    };
+    this.title = "Titans Website";
   }
 
-  // Lit reactive properties
   static get properties() {
     return {
       ...super.properties,
@@ -36,35 +35,46 @@ export class TitansWebsiteProject extends DDDSuper(I18NMixin(LitElement)) {
     };
   }
 
-  // Lit scoped styles
   static get styles() {
-    return [super.styles,
-    css`
-      :host {
-        display: block;
-        color: var(--ddd-theme-primary);
-        background-color: var(--ddd-theme-accent);
-        font-family: var(--ddd-font-navigation);
-      }
-      .wrapper {
-        margin: var(--ddd-spacing-2);
-        padding: var(--ddd-spacing-4);
-      }
-      h3 span {
-        font-size: var(--titans-website-project-label-font-size, var(--ddd-font-size-s));
-      }
-    `];
+    return [
+      super.styles,
+      css`
+        :host {
+          display: block;
+          background: #f7f7f7;
+          color: #111;
+          font-family: Arial, sans-serif;
+        }
+
+        .page {
+          max-width: 1200px;
+          margin: 0 auto;
+          padding: 24px;
+        }
+
+        .section {
+          margin: 32px 0;
+        }
+
+        .section-title {
+          font-size: 1.5rem;
+          font-weight: 700;
+          margin-bottom: 12px;
+          color: #0c2340;
+          border-left: 6px solid #4b92db;
+          padding-left: 12px;
+        }
+      `,
+    ];
   }
 
-  // Lit render the HTML
   render() {
     return html`
-    <div class="wrapper">
-      <h3><span>${this.t.title}:</span> ${this.title}</h3>
-      <slot></slot>
-    </div>`;
+<div class="wrapper">
+  <h3><span>${this.t.title}:</span> ${this.title}</h3>
+  <slot></slot>
+</div>`;
   }
-
 }
 
 globalThis.customElements.define(TitansWebsiteProject.tag, TitansWebsiteProject);
