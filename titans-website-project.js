@@ -6,6 +6,7 @@ import { LitElement, html, css } from "lit";
 import { DDDSuper } from "@haxtheweb/d-d-d/d-d-d.js";
 import { I18NMixin } from "@haxtheweb/i18n-manager/lib/I18NMixin.js";
 
+import "./titans-website-profile-picture";
 import "./titans-website-pics.js";
 import "./titans-website-stats.js";
 import "./titans-webesite-socials.js";
@@ -71,9 +72,7 @@ export class TitansWebsiteProject extends DDDSuper(I18NMixin(LitElement)) {
   render() {
     return html`
     <div class="wrapper">
-        <titans-website-profile-picture>
-          
-        </titans-website-profile-picture>
+        <titans-website-profile-picture></titans-website-profile-picture>
     </div>`;
   }
 }

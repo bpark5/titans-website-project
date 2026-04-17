@@ -39,7 +39,7 @@ export class TitansWebsiteProfilePicture extends DDDSuper(I18NMixin(LitElement))
         }
 
         .user-information {
-            background-color: var(--ddd-)
+            background-color: var(--ddd-beaver-blue);
         }
       
     `];
