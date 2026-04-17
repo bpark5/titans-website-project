@@ -8,8 +8,8 @@ import { I18NMixin } from "@haxtheweb/i18n-manager/lib/I18NMixin.js";
 
 import "./titans-website-pics.js";
 import "./titans-website-stats.js";
-import "./titans-website-socials.js";
-import "./titans-website-contacts.js";
+import "./titans-webesite-socials.js";
+import "./titans-webesite-contacts.js";
 import "./titans-website-footer.js";
 
 /**
