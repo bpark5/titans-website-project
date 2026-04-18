@@ -6,12 +6,13 @@ import { LitElement, html, css } from "lit";
 import { DDDSuper } from "@haxtheweb/d-d-d/d-d-d.js";
 import { I18NMixin } from "@haxtheweb/i18n-manager/lib/I18NMixin.js";
 
-import "./titans-website-profile-picture";
+import "./titans-website-profile-picture.js";
+import "./titans-website-nav-bar.js";
 import "./titans-website-pics.js";
 import "./titans-website-stats.js";
 import "./titans-webesite-socials.js";
 import "./titans-webesite-contacts.js";
-import "./titans-website-footer.js";
+//import "./titans-website-footer.js";
 
 /**
  * `titans-website-project`
@@ -72,7 +73,10 @@ export class TitansWebsiteProject extends DDDSuper(I18NMixin(LitElement)) {
   render() {
     return html`
     <div class="wrapper">
-        <titans-website-profile-picture></titans-website-profile-picture>
+        <titans-website-profile-picture username="Default"></titans-website-profile-picture>
+        <titans-website-nav-bar 
+          logoSrc="https://img.mlbstatic.com/mlb-images/image/private/t_16x9/t_w1024/mlb/stkdr5z7zbasmrhtotmt"> //placeholder for right now
+        </titans-website-nav-bar>
     </div>`;
   }
 }
