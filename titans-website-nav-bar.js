@@ -63,7 +63,7 @@ export class TitansWebsiteNavBar extends DDDSuper(I18NMixin(LitElement)) {
             align-items: center;
             padding: var(--ddd-spacing-2);
             margin-right: var(--ddd-spacing-5);
-            gap: 16px;
+            gap: var(--ddd-spacing-5);
         }
 
         .buttons button {
@@ -71,12 +71,40 @@ export class TitansWebsiteNavBar extends DDDSuper(I18NMixin(LitElement)) {
             border-radius: var(--ddd-radius-sm);
             border: var(--ddd-border-md);
             border-color: var(--ddd-theme-default-accent);
-            font: var(--ddd-font-size-s);
+            font-size: var(--ddd-font-size-ml);
+            cursor: pointer;
         }
 
-        .schedule-button:hover, .roster-button:hover, .about-button:hover, .schedule-button:focus, .roster-button:focus, .about-button:focus {
+        .roster-button:hover .roster-button:focus{
             opacity: 0.8;
             cursor: pointer;
+        }
+
+        .dropdown-button {
+            position: relative;
+        }
+
+        .schedule-dropdown, .about-dropdown {
+            display: none;
+            position: absolute;
+            background: white;
+            max-width: 90%;
+            z-index: 100;
+        }
+
+        .dropdown-button:hover .schedule-dropdown,
+        .dropdown-button:focus-within .schedule-dropdown,
+        .dropdown-button:hover .about-dropdown,
+        .dropdown-button:focus-within .about-dropdown {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .schedule-dropdown a, .about-dropdown a {
+            font-size: var(--ddd-font-size-3xs);
+            padding: var(--ddd-spacing-2);
+            color: var(--ddd-theme-default-beaverBlue);
+            border: var(--ddd-border-xs);
         }
     `];
     }
@@ -88,9 +116,23 @@ export class TitansWebsiteNavBar extends DDDSuper(I18NMixin(LitElement)) {
                 <img src=${this.logoSrc} alt=${this.logoDescription} />
             </div>
             <div class="buttons">
-                <button class="schedule-button" @click=${() => window.location.href = '/schedule'}>Schedule</button>
-                <button class="roster-button" @click=${() => window.location.href = '/play-list'}>Roster</button>
-                <button class="about-button" @click=${() => window.location.href = '/contact'}>About</button>
+                <div class="dropdown-button">
+                    <button class="schedule-button">Schedule</button>
+                    <div class="schedule-dropdown">
+                        <a href="/schedule">Schedule Page</a>
+                        <a href="/schedule/games">Games</a>
+                        <a href="/schedule/practice">Practice</a>
+                    </div>
+                </div>
+                <button class="roster-button" @click=${() => window.location.href = '/roster'}>Roster</button>
+                <div class="dropdown-button">
+                    <button class="about-button">About</button>
+                    <div class="about-dropdown">
+                        <a href="/about">About Page</a>
+                        <a href="/about/contact">Contact</a>
+                    </div>
+                </div>
+                
             </div>
         </div>
 

@@ -8,6 +8,7 @@ import { I18NMixin } from "@haxtheweb/i18n-manager/lib/I18NMixin.js";
 
 import "./titans-website-profile-picture.js";
 import "./titans-website-nav-bar.js";
+import "./titans-website-play-list.js";
 import "./titans-website-pics.js";
 import "./titans-website-stats.js";
 import "./titans-webesite-socials.js";
@@ -70,6 +71,8 @@ export class TitansWebsiteProject extends DDDSuper(I18NMixin(LitElement)) {
     ];
   }
 
+  
+
   render() {
     return html`
     <div class="wrapper">
@@ -77,6 +80,10 @@ export class TitansWebsiteProject extends DDDSuper(I18NMixin(LitElement)) {
         <titans-website-nav-bar 
           logoSrc="https://img.mlbstatic.com/mlb-images/image/private/t_16x9/t_w1024/mlb/stkdr5z7zbasmrhtotmt"> //placeholder for right now
         </titans-website-nav-bar>
+        <titans-website-play-list>
+          <titans-website-play-list-slide slideImage="https://img.mlbstatic.com/mlb-images/image/private/t_16x9/t_w1024/mlb/stkdr5z7zbasmrhtotmt"></titans-website-play-list-slide>
+          <titans-website-play-list-slide slideImage="https://a57.foxnews.com/static.foxnews.com/foxnews.com/content/uploads/2026/03/1200/675/paul-skenes-opening-day-1.jpg?ve=1&tl=1"></titans-website-play-list-slide>
+        </titans-website-play-list>
     </div>`;
   }
 }
