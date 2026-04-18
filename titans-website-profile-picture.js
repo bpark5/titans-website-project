@@ -39,7 +39,7 @@ export class TitansWebsiteProfilePicture extends DDDSuper(I18NMixin(LitElement))
         }
 
         .user-information {
-            background-color: light-dark(var(--ddd-theme-default-beaverBlue),var(--ddd-theme-default-beaver80));
+            background-color: var(--ddd-theme-default-beaverBlue);
             color: var(--ddd-theme-default-shrineLight);
         }
 
@@ -53,7 +53,7 @@ export class TitansWebsiteProfilePicture extends DDDSuper(I18NMixin(LitElement))
     render() {
         return html`
         <div class="user-information">
-            <span class="username">${this.username}</span>
+            <span class="username">👤 ${this.username}</span>
         </div>
 
         `;

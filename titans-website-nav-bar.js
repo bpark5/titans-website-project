@@ -44,10 +44,7 @@ export class TitansWebsiteNavBar extends DDDSuper(I18NMixin(LitElement)) {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            background-color: light-dark(var(--ddd-theme-default-limestoneLight),var(--ddd-theme-default-nittanyNavy));
-        }
-
-        .logo-section {
+            background-color: var(--ddd-theme-default-beaverBlue);
             display: flex;
             align-items: center;
         }
@@ -67,7 +64,7 @@ export class TitansWebsiteNavBar extends DDDSuper(I18NMixin(LitElement)) {
         }
 
         .buttons button {
-            background-color: light-dark(var(--ddd-theme-default-white),var(--ddd-theme-default-beaverBlue));
+            background-color: light-dark(var(--ddd-theme-default-limestoneLight),var(--ddd-theme-default-nittanyNavy));
             border-radius: var(--ddd-radius-sm);
             border: var(--ddd-border-md);
             border-color: var(--ddd-theme-default-accent);

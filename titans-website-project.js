@@ -76,12 +76,12 @@ export class TitansWebsiteProject extends DDDSuper(I18NMixin(LitElement)) {
   render() {
     return html`
     <div class="wrapper">
-        <titans-website-profile-picture username="Default"></titans-website-profile-picture>
+        <titans-website-profile-picture username="Random username"></titans-website-profile-picture>
         <titans-website-nav-bar 
           logoSrc="https://img.mlbstatic.com/mlb-images/image/private/t_16x9/t_w1024/mlb/stkdr5z7zbasmrhtotmt"> //placeholder for right now
         </titans-website-nav-bar>
         <titans-website-play-list>
-          <titans-website-play-list-slide slideImage="https://img.mlbstatic.com/mlb-images/image/private/t_16x9/t_w1024/mlb/stkdr5z7zbasmrhtotmt"></titans-website-play-list-slide>
+          <titans-website-play-list-slide slideImage="https://encrypted-tbn2.gstatic.com/licensed-image?q=tbn:ANd9GcRIiww5ye8cvdDtVB1SJC8Lp7TL8nxBSlaTvCMTxkhm8afn5fVAPWYEZb3D6xNUkuds07FPw2lkCuCSa-Q"></titans-website-play-list-slide>
           <titans-website-play-list-slide slideImage="https://a57.foxnews.com/static.foxnews.com/foxnews.com/content/uploads/2026/03/1200/675/paul-skenes-opening-day-1.jpg?ve=1&tl=1"></titans-website-play-list-slide>
         </titans-website-play-list>
     </div>`;

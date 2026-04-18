@@ -52,6 +52,8 @@ export class TitansWebsitePlayListSlide extends DDDSuper(I18NMixin(LitElement)) 
         .slide-image img {
             display: block;
             width: 50%;
+            max-height: 350px;
+            object-fit: cover;
             margin-left: auto;
             margin-right: auto;
             padding: var(--ddd-spacing-5);
