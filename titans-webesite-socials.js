@@ -8,7 +8,7 @@ import { I18NMixin } from "@haxtheweb/i18n-manager/lib/I18NMixin.js";
  * @demo index.html
  * @element titans-website-socials
  */
-export class TitansWebsiteSocials extends DDDSuper(I18NMixin(LitElement)) {
+export class TitansWebesiteSocials extends DDDSuper(I18NMixin(LitElement)) {
 
   static get tag() {
     return "titans-website-socials";
@@ -75,5 +75,5 @@ export class TitansWebsiteSocials extends DDDSuper(I18NMixin(LitElement)) {
   }
 
 }
-customElements.define(TitansWebsiteSocials.tag, TitansWebsiteSocials);
+customElements.define(TitansWebesiteSocials.tag, TitansWebesiteSocials);
 
