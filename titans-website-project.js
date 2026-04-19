@@ -9,11 +9,13 @@ import { I18NMixin } from "@haxtheweb/i18n-manager/lib/I18NMixin.js";
 import "./titans-website-profile-picture.js";
 import "./titans-website-nav-bar.js";
 import "./titans-website-play-list.js";
+import "./titans-website-play-list-slide.js";
+import "./titans-website-slide-arrow.js";
 import "./titans-website-pics.js";
 import "./titans-website-stats.js";
 import "./titans-webesite-socials.js";
 import "./titans-webesite-contacts.js";
-//import "./titans-website-footer.js";
+
 
 /**
  * `titans-website-project`

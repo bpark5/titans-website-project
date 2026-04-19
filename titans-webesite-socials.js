@@ -68,7 +68,7 @@ export class TitansWebsiteSocials extends DDDSuper(I18NMixin(LitElement)) {
     return html`
       <div class="socials">
         ${this.socials.map(
-          (social) => html`<a href="${social.url}" target="_blank">${social.label}</a>`
+          (social) => html`<a href="${social.url}" target="_blank" rel="noopener noreferrer">${social.label}</a>`
         )}
       </div>
     `;

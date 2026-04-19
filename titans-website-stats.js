@@ -58,6 +58,13 @@ static get styles() {
         font-weight: 700;
         color: #333;
       }
+
+      .value {
+        font-size: 24px;
+        font-weight: 700;
+        color: #4b92db;
+        margin-top: 4px;
+      }
       `,
     ];
   }
