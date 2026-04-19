@@ -33,7 +33,7 @@ export class TitansWebsiteContacts extends DDDSuper(I18NMixin(LitElement)) {
 
         .row {
             font-size: 12px;
-            color: white;
+            color: black;
 
         }
 

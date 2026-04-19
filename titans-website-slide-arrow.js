@@ -19,13 +19,15 @@ export class TitansWebsiteSlideArrow extends DDDSuper(I18NMixin(LitElement)) {
 
     constructor() {
         super();
+        this.currentIndex = 0;
+        this.totalSlides = 0;
     }
 
     static get properties() {
     return {
       ...super.properties,
       currentIndex: {type: Number},
-      totalSlide: {type: Number}
+      totalSlides: {type: Number}
     };
     }
 
