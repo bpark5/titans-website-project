@@ -13,8 +13,8 @@ import "./titans-website-play-list-slide.js";
 import "./titans-website-slide-arrow.js";
 import "./titans-website-pics.js";
 import "./titans-website-stats.js";
-import "./titans-webesite-socials.js";
-import "./titans-webesite-contacts.js";
+import "./titans-website-socials.js";
+import "./titans-website-contacts.js";
 
 
 /**
@@ -86,6 +86,8 @@ export class TitansWebsiteProject extends DDDSuper(I18NMixin(LitElement)) {
           <titans-website-play-list-slide slideImage="https://encrypted-tbn2.gstatic.com/licensed-image?q=tbn:ANd9GcRIiww5ye8cvdDtVB1SJC8Lp7TL8nxBSlaTvCMTxkhm8afn5fVAPWYEZb3D6xNUkuds07FPw2lkCuCSa-Q"></titans-website-play-list-slide>
           <titans-website-play-list-slide slideImage="https://a57.foxnews.com/static.foxnews.com/foxnews.com/content/uploads/2026/03/1200/675/paul-skenes-opening-day-1.jpg?ve=1&tl=1"></titans-website-play-list-slide>
         </titans-website-play-list>
+        <titans-website-socials></titans-website-socials>
+        <titans-website-contacts></titans-website-contacts>
     </div>`;
   }
 }
