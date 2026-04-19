@@ -8,7 +8,7 @@ import { I18NMixin } from "@haxtheweb/i18n-manager/lib/I18NMixin.js";
  * @demo index.html
  * @element titans-website-contacts
  */
-export class TitansWebsiteContacts extends DDDSuper(I18NMixin(LitElement)) {
+export class TitansWebesiteContacts extends DDDSuper(I18NMixin(LitElement)) {
 
   static get tag() {
     return "titans-website-contacts";
@@ -66,4 +66,4 @@ render() {
 }
 }
 
-globalThis.customElements.define(TitansWebsiteContacts.tag, TitansWebsiteContacts);
+globalThis.customElements.define(TitansWebesiteContacts.tag, TitansWebesiteContacts);
