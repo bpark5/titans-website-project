@@ -30,20 +30,20 @@ export class TitansWebsitePics extends DDDSuper(I18NMixin(LitElement)) {
     super();
     this.pictures = [
       {
-        title: "YBL",
-        src: "https://www.bing.com/ck/a?!&&p=0029a884734c023c8e2bc5d09a01f64d2dd3e3e9720e38d8d6ac29598cd74f81JmltdHM9MTc3NjI5NzYwMA&ptn=3&ver=2&hsh=4&fclid=3841a385-14bf-620e-1b61-b75415bb631c&u=a1L2ltYWdlcy9zZWFyY2g_cT15b3V0aCtiYXNlYmFsbCtsZWFndWUrbG9nbytwaG90byZpZD0wMDRCNjdEQjhCRTk5NTE5NzU0N0NEQUVEQjNENDEyNkZGMEYyMTM1JkZPUk09SVFGUkJB",
+        title: "Team Photo",
+        src: "https://chatgpt.com/backend-api/estuary/public_content/enc/eyJpZCI6Im1fNjllNjM3YzgyZjBjODE5MWIyYWYwODM4YjZlZTQ0ODQ6ZmlsZV8wMDAwMDAwMDY0OTA3MWZkOWFjYWFhOWY4M2MzMTI0NyIsInRzIjoiMjA1NjMiLCJwIjoicHlpIiwiY2lkIjoiMSIsInNpZyI6ImE0MzA4NjU3YjJiNGU4YTIwMWM2MzA2NGQ0MjdlMjExYjkxNjQ5ODJkYzkxNWI1MmJlYmYzZmY1MWI1NmM1ZGUiLCJ2IjoiMCIsImdpem1vX2lkIjpudWxsLCJjcyI6bnVsbCwiY2RuIjpudWxsLCJjcCI6bnVsbCwibWEiOm51bGx9",
       },
       {
-        title: "Division",
+        title: "Poney League",
         src: "https://tse3.mm.bing.net/th/id/OIP.S_QpnpRTuEcUrTaLkVQkHwHaHa?rs=1&pid=ImgDetMain&o=7&rm=3",
       },
       {
-        title: "Another Picture",
-        src: "https://example.com/another-picture.jpg",
+        title: "Team Gear",
+        src: "https://chatgpt.com/backend-api/estuary/public_content/enc/eyJpZCI6Im1fNjllNjM4ODBhZjkwODE5MThjZTE4ODE5ZmFlYjM4Nzc6ZmlsZV8wMDAwMDAwMGExNzA3MWZkYTkxY2IzNDkxNjhlMjMyYSIsInRzIjoiMjA1NjMiLCJwIjoicHlpIiwiY2lkIjoiMSIsInNpZyI6ImYzMThhMGVmNDQ0MzQ5ZTg3YzEyZmFhYjk0YzBlOTMzNmE2NjQzOThlZGYxZWM1NWU0Nzk0ZmMyOGZkMDJjZDciLCJ2IjoiMCIsImdpem1vX2lkIjpudWxsLCJjcyI6bnVsbCwiY2RuIjpudWxsLCJjcCI6bnVsbCwibWEiOm51bGx9",
       },
       {
-        title: "Yet Another Picture",
-        src: "https://example.com/yet-another-picture.jpg",
+        title: "Local Division",
+        src: "https://chatgpt.com/backend-api/estuary/content?id=file_000000008bf471f884a17dfe138cf06c&ts=493526&p=fs&cid=1&sig=76cdd066ac4971cccaf86a0d3a4359c5cbdc2fed67594fcecf2d07d3d8e92d55&v=0",
 
       },
 
