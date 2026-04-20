@@ -11,6 +11,7 @@ import "./titans-website-nav-bar.js";
 import "./titans-website-play-list.js";
 import "./titans-website-play-list-slide.js";
 import "./titans-website-slide-arrow.js";
+import "./titans-website-schedule.js";
 import "./titans-website-pics.js";
 import "./titans-website-stats.js";
 import "./titans-website-socials.js";
@@ -80,12 +81,15 @@ export class TitansWebsiteProject extends DDDSuper(I18NMixin(LitElement)) {
     <div class="wrapper">
         <titans-website-profile-picture username="Random username"></titans-website-profile-picture>
         <titans-website-nav-bar 
-          logoSrc="https://img.mlbstatic.com/mlb-images/image/private/t_16x9/t_w1024/mlb/stkdr5z7zbasmrhtotmt"> //placeholder for right now
+          logoSrc="https://chatgpt.com/backend-api/estuary/public_content/enc/eyJpZCI6Im1fNjllNjM1MjI4Mjg4ODE5MTk3Y2IyYTg5ZGIyYjdmOWI6ZmlsZV8wMDAwMDAwMDk2OTA3MWY4YTZkYjU0MTU4YjJmMjk2OSIsInRzIjoiMjA1NjMiLCJwIjoicHlpIiwiY2lkIjoiMSIsInNpZyI6ImE4Yzc0MWNhMjQyNjM5NGI2YmYzNDc5NzZjZmY5MDgwZTI2ODgwOGU5MWY5MzZmMzJmNDA5OTFiYWJjODczNjIiLCJ2IjoiMCIsImdpem1vX2lkIjpudWxsLCJjcyI6bnVsbCwiY2RuIjpudWxsLCJjcCI6bnVsbCwibWEiOm51bGx9"> //placeholder for right now
         </titans-website-nav-bar>
         <titans-website-play-list>
           <titans-website-play-list-slide slideImage="https://encrypted-tbn2.gstatic.com/licensed-image?q=tbn:ANd9GcRIiww5ye8cvdDtVB1SJC8Lp7TL8nxBSlaTvCMTxkhm8afn5fVAPWYEZb3D6xNUkuds07FPw2lkCuCSa-Q"></titans-website-play-list-slide>
           <titans-website-play-list-slide slideImage="https://a57.foxnews.com/static.foxnews.com/foxnews.com/content/uploads/2026/03/1200/675/paul-skenes-opening-day-1.jpg?ve=1&tl=1"></titans-website-play-list-slide>
         </titans-website-play-list>
+        <titans-website-schedule></titans-website-schedule>
+        <titans-website-pics></titans-website-pics>
+        <titans-website-stats></titans-website-stats>
         <titans-website-socials></titans-website-socials>
         <titans-website-contacts></titans-website-contacts>
     </div>`;

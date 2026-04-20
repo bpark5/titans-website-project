@@ -51,8 +51,8 @@ export class TitansWebsiteNavBar extends DDDSuper(I18NMixin(LitElement)) {
         
         .logo-section img {
             display: block;
-            max-width: 100px;
-            padding: var(--ddd-spacing-3);
+            max-width: 200px;
+            padding-top: var(--ddd-spacing-2);
         }
 
         .buttons {
