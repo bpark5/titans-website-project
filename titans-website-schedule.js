@@ -58,12 +58,14 @@ export class TitansWebsiteSchedule extends DDDSuper(I18NMixin(LitElement)) {
             border-color: var(--ddd-theme-default-accent);
             font-size: var(--ddd-font-size-4xs);
             cursor: pointer;
-            margin: var(--ddd-spacing-2);
+            margin: var(--ddd-spacing-4);
             color: var(--ddd-theme-default-shrineLight);
         }
 
-        .prev-month:hover, .next-month:hover {
-            opacity: 0.8;
+        .prev-month:hover, .next-month:hover, .prev-month:focus, .next-month:focus {
+            opacity: 0.9;
+            transform: scale(1.05);
+            transition: 0.3s;
         }
 
         .date {
@@ -76,6 +78,7 @@ export class TitansWebsiteSchedule extends DDDSuper(I18NMixin(LitElement)) {
             display: grid;
             grid-template-columns: repeat(7, 1fr);
             gap: 5px;
+            padding: var(--ddd-spacing-4);
         }
 
         .day {
