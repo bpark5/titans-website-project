@@ -64,6 +64,7 @@ export class TitansWebsiteNavBar extends DDDSuper(I18NMixin(LitElement)) {
         }
 
         .buttons button {
+            color: light-dark(var(--ddd-theme-default-info), var(--ddd-theme-default-shrineLight));
             background-color: light-dark(var(--ddd-theme-default-limestoneLight),var(--ddd-theme-default-nittanyNavy));
             border-radius: var(--ddd-radius-sm);
             border: var(--ddd-border-md);

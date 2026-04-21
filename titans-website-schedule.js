@@ -41,7 +41,7 @@ export class TitansWebsiteSchedule extends DDDSuper(I18NMixin(LitElement)) {
         }
 
         .calendar-wrapper {
-            background-color: light-dark(var(--ddd-theme-default-limestoneLight),var(--ddd-theme-default-nittanyNavy))
+            background-color: light-dark(var(--ddd-theme-default-limestoneLight),var(--ddd-theme-default-nittanyNavy));
         }
 
         .calendar-header {
@@ -52,7 +52,7 @@ export class TitansWebsiteSchedule extends DDDSuper(I18NMixin(LitElement)) {
         }
 
         .prev-month, .next-month {
-            background-color: light-dark(var(--ddd-theme-default-limestoneLight),var(--ddd-theme-default-nittanyNavy));
+            background-color: var(--ddd-theme-default-nittanyNavy);
             border-radius: var(--ddd-radius-sm);
             border: var(--ddd-border-md);
             border-color: var(--ddd-theme-default-accent);
@@ -69,7 +69,7 @@ export class TitansWebsiteSchedule extends DDDSuper(I18NMixin(LitElement)) {
         }
 
         .date {
-            color: var(--ddd-theme-default-shrineLight);
+            color: light-dark(var(--ddd-theme-default-info), var(--ddd-theme-default-shrineLight));            
             font: var(--ddd-font-primary);
             font-size: var(--ddd-font-size-ms);
         }
@@ -81,21 +81,61 @@ export class TitansWebsiteSchedule extends DDDSuper(I18NMixin(LitElement)) {
             padding: var(--ddd-spacing-4);
         }
 
-        .day {
+        .days-header {
+            display: grid;
+            grid-template-columns: repeat(7, 1fr);
+            gap: 5px;
+            padding: var(--ddd-spacing-4);
+            color: var(--ddd-theme-default-shrineLight);
+            
+            text-align: center;
+        }
+
+        .days-header span {
+            border: var(--ddd-border-md);
+            border-color: var(--ddd-theme-default-accent);
+            border-radius: var(--ddd-radius-sm);
+            padding: var(--ddd-spacing-6);
+            background-color: var(--ddd-theme-default-nittanyNavy);
+        }
+
+        .day, .day-empty{
             border: 1px solid rgb(204, 204, 204);
             padding: 8px;
             min-height: 80px;
-            background-color: var(--ddd-theme-default-shrineLight);;
+            background-color: var(--ddd-theme-default-shrineLight);
             position: relative;
+            border-radius: var(--ddd-radius-sm);
         }
 
-        
-      
+        .day-number {
+            display: block;
+            color: var(--ddd-theme-default-info);
+        }
+
     `];
     }
 
     render() {
+        const daysInMonth = new Date(this.currentYear, this.currentMonth + 1, 0).getDate();
+        const firstDay = new Date(this.currentYear, this.currentMonth, 1).getDay();
         const nameOfMonth = new Date(this.currentYear, this.currentMonth).toLocaleString('default', {month: 'long'});
+
+        const emptyCells = [];
+        for (let i = 0; i < firstDay; i++) {
+            emptyCells.push(html`
+                <div class="day-empty"></div>`);
+        }
+
+        const dayCells = [];
+        for (let i = 1; i <= daysInMonth; i++) {
+            dayCells.push(html`
+            <div class="day">
+                <span class="day-number">${i}</span>
+            </div>
+            `);
+        } 
+
         return html`
         <div class="calendar-wrapper">
             <div class="calendar-header">
@@ -103,32 +143,18 @@ export class TitansWebsiteSchedule extends DDDSuper(I18NMixin(LitElement)) {
                 <span class="date">${nameOfMonth} ${this.currentYear}</span>
                 <button class="next-month" @click=${this._nextMonth}>Next</button>
             </div>
+            <div class="days-header">
+                <span>Sunday</span>
+                <span>Monday</span>
+                <span>Tuesday</span>
+                <span>Wednesday</span>
+                <span>Thursday</span>
+                <span>Friday</span>
+                <span>Saturday</span>
+            </div>
             <div class="calendar-grid">
-                <div class="day">
-                    <span class="day-number">1</span>
-                </div>
-                <div class="day">
-                    <span class="day-number">2</span>
-                </div>
-                <div class="day">
-                    <span class="day-number">3</span>
-                </div>
-                <div class="day">
-                    <span class="day-number">4</span>
-                </div>
-                <div class="day">
-                    <span class="day-number">5</span>
-                </div>
-                <div class="day">
-                    <span class="day-number">6</span>
-                </div>
-                <div class="day">
-                    <span class="day-number">7</span>
-                </div>
-                <div class="day">
-                    <span class="day-number">8</span>
-                </div>
-
+                ${emptyCells}
+                ${dayCells}
             </div>
         </div> 
         `;
