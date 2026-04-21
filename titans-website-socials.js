@@ -39,21 +39,27 @@ export class TitansWebsiteSocials extends DDDSuper(I18NMixin(LitElement)) {
         display: block;
       }
       .socials {
-        display: grid;
+        display: flex;
         flex-wrap: wrap;
         gap: 16px;
+        justify-content: flex-start;
+        align-items: center;
       }
 
       .socials a {
-        display: inline-block;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: fit-content;
         text-decoration: none;
         color: inherit;
         background: #4b92db;
         color: white;
-        padding: 14px 22px;
+        padding: 10px 18px;
         border-radius: 999px;
         font-weight: 700;
         transition: 0.2s ease;
+        min-width: 140px;
         }
 
     .socials a:hover {
