@@ -49,6 +49,11 @@ export class TitansWebsitePlayListSlide extends DDDSuper(I18NMixin(LitElement)) 
             display: none;
         }
 
+
+        .slide-image {
+            padding: var(--ddd-spacing-5);
+            padding-top: var(--ddd-spacing-10);
+        }
         .slide-image img {
             display: block;
             width: 50%;
@@ -56,8 +61,9 @@ export class TitansWebsitePlayListSlide extends DDDSuper(I18NMixin(LitElement)) 
             object-fit: cover;
             margin-left: auto;
             margin-right: auto;
-            padding: var(--ddd-spacing-5);
-            padding-top: var(--ddd-spacing-10);
+            border:  var(--ddd-border-md);
+            border-color: light-dark(var(--ddd-theme-default-nittanyNavy), var(--ddd-theme-default-accent));
+            border-radius: var(--ddd-radius-sm);
         }
 
     `];
