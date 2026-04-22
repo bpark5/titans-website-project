@@ -99,8 +99,7 @@ export class TitansWebsiteSchedule extends DDDSuper(I18NMixin(LitElement)) {
         }
 
         .day, .day-empty{
-            border: 1px solid rgb(204, 204, 204);
-            padding: 8px;
+            padding: var(--ddd-spacing-3);
             min-height: 80px;
             background-color: var(--ddd-theme-default-shrineLight);
             position: relative;

@@ -20,16 +20,15 @@ export class TitansWebsiteWeeklySchedule extends DDDSuper(I18NMixin(LitElement))
 
     constructor() {
         super();
-        this.currentMonth = new Date().getMonth();
-        this.currentYear = new Date().getFullYear();
+        const weekStart = new Date();
+        weekStart.setDate(weekStart.getDate() - weekStart.getDay())
+        this.currentWeek = weekStart;
     }
 
     static get properties() {
         return {
             ...super.properties,
-            title: { type: String },
-            currentMonth: {type: Number},
-            currentYear: {type: Number},
+            currentWeek: {type: Object}
         };
     }
 
@@ -40,19 +39,61 @@ export class TitansWebsiteWeeklySchedule extends DDDSuper(I18NMixin(LitElement))
             display:block;
         }
 
-        .calendar-wrapper {
+        .week-wrapper {
             background-color: light-dark(var(--ddd-theme-default-limestoneLight),var(--ddd-theme-default-nittanyNavy));
         }
 
-        .calendar-header {
+        .week-header {
             display: flex;
             justify-content: space-between;
             align-items: center;
             margin-bottom: var(--ddd-spacing-2);
+            padding-left: var(--ddd-spacing-4);
         }
 
-        .prev-month, .next-month {
-            background-color: var(--ddd-theme-default-nittanyNavy);
+        .week-buttons {
+            display: flex;
+            padding-right: var(--ddd-spacing-3);
+        }
+
+        .days-header {
+            display: grid;
+            grid-template-columns: repeat(7, 1fr);
+            gap: 5px;
+            padding: var(--ddd-spacing-4);
+            padding-bottom: 0;
+            text-align: center;
+            font-weight: bold;
+            color: var(--ddd-theme-default-shrineLight);
+        }
+
+        .week-grid {
+            display: grid;
+            grid-template-columns: repeat(7, 1fr);
+            gap: 5px;
+            padding: var(--ddd-spacing-4);
+        }
+
+        .date {
+            color: light-dark(var(--ddd-theme-default-info), var(--ddd-theme-default-shrineLight));            
+            font: var(--ddd-font-primary);
+            font-size: var(--ddd-font-size-xs);
+        }
+
+        .day {
+            padding: var(--ddd-spacing-3);
+            min-height: 80px;
+            background-color: var(--ddd-theme-default-shrineLight);
+            position: relative;
+            border-radius: var(--ddd-radius-sm);
+        }
+
+        .day-number {
+            display: block;
+        }
+
+        .prev-week, .next-week {
+            background-color: light-dark(var(--ddd-theme-default-limestoneLight),var(--ddd-theme-default-nittanyNavy));
             border-radius: var(--ddd-radius-sm);
             border: var(--ddd-border-md);
             border-color: var(--ddd-theme-default-accent);
@@ -62,86 +103,40 @@ export class TitansWebsiteWeeklySchedule extends DDDSuper(I18NMixin(LitElement))
             color: var(--ddd-theme-default-shrineLight);
         }
 
-        .prev-month:hover, .next-month:hover, .prev-month:focus, .next-month:focus {
+        .prev-week:hover, .next-week:hover, .prev-week:focus, .next-week:focus {
             opacity: 0.9;
             transform: scale(1.05);
             transition: 0.3s;
-        }
-
-        .date {
-            color: light-dark(var(--ddd-theme-default-info), var(--ddd-theme-default-shrineLight));            
-            font: var(--ddd-font-primary);
-            font-size: var(--ddd-font-size-ms);
-        }
-
-        .calendar-grid {
-            display: grid;
-            grid-template-columns: repeat(7, 1fr);
-            gap: 5px;
-            padding: var(--ddd-spacing-4);
-        }
-
-        .days-header {
-            display: grid;
-            grid-template-columns: repeat(7, 1fr);
-            gap: 5px;
-            padding: var(--ddd-spacing-4);
-            color: var(--ddd-theme-default-shrineLight);
-            
-            text-align: center;
-        }
-
-        .days-header span {
-            border: var(--ddd-border-md);
-            border-color: var(--ddd-theme-default-accent);
-            border-radius: var(--ddd-radius-sm);
-            padding: var(--ddd-spacing-6);
-            background-color: var(--ddd-theme-default-nittanyNavy);
-        }
-
-        .day, .day-empty{
-            border: 1px solid rgb(204, 204, 204);
-            padding: 8px;
-            min-height: 80px;
-            background-color: var(--ddd-theme-default-shrineLight);
-            position: relative;
-            border-radius: var(--ddd-radius-sm);
-        }
-
-        .day-number {
-            display: block;
-            color: var(--ddd-theme-default-info);
         }
 
     `];
     }
 
     render() {
-        const daysInMonth = new Date(this.currentYear, this.currentMonth + 1, 0).getDate();
-        const firstDay = new Date(this.currentYear, this.currentMonth, 1).getDay();
-        const nameOfMonth = new Date(this.currentYear, this.currentMonth).toLocaleString('default', {month: 'long'});
+        const weekEnd = new Date(this.currentWeek);
+        weekEnd.setDate(weekEnd.getDate() + 6);
 
-        const emptyCells = [];
-        for (let i = 0; i < firstDay; i++) {
-            emptyCells.push(html`
-                <div class="day-empty"></div>`);
+        const startLabel = this.currentWeek.toLocaleDateString('default', {month: 'short', day: 'numeric'});
+        const endLabel = weekEnd.toLocaleDateString('default', {month: 'short', day: 'numeric', year: 'numeric'});
+
+        const weekCells = [];
+            for (let i = 0; i < 7; i++) {
+            const day = new Date(this.currentWeek);
+            day.setDate(day.getDate() + i);
+            weekCells.push (html`
+                <div class="day">
+                    <span class="day-number">${day.getDate()}</span>
+                </div>`)
         }
-
-        const dayCells = [];
-        for (let i = 1; i <= daysInMonth; i++) {
-            dayCells.push(html`
-            <div class="day">
-                <span class="day-number">${i}</span>
-            </div>
-            `);
-        } 
 
         return html`
         <div class="week-wrapper">
             <div class="week-header">
-                <button class="prev-month" @click=${this._prevMonth}> Previous</button>
-                <span class="date">${nameOfMonth} ${this.currentYear}</span>
-                <button class="next-month" @click=${this._nextMonth}>Next</button>
+                <span class="date">${startLabel} - ${endLabel}</span>
+                <div class="week-buttons">
+                    <button class="prev-week" @click=${this._prevWeek}> Prev</button>
+                    <button class="next-week" @click=${this._nextWeek}>Next</button>
+                </div>
             </div>
             <div class="days-header">
                 <span>Sunday</span>
@@ -152,32 +147,23 @@ export class TitansWebsiteWeeklySchedule extends DDDSuper(I18NMixin(LitElement))
                 <span>Friday</span>
                 <span>Saturday</span>
             </div>
-            <div class="calendar-grid">
-                ${emptyCells}
-                ${dayCells}
+            <div class="week-grid">
+                ${weekCells}
             </div>
         </div> 
         `;
     }
 
-    _prevMonth() {
-        if (this.currentMonth === 0) {
-            this.currentMonth = 11;
-            this.currentYear--;
-        }
-        else {
-            this.currentMonth--;
-        }
+    _prevWeek() {
+        const date = new Date(this.currentWeek);
+        date.setDate(date.getDate() - 7);
+        this.currentWeek = date;
     }
 
-    _nextMonth() {
-        if (this.currentMonth === 11) {
-            this.currentMonth = 0;
-            this.currentYear++;
-        }
-        else {
-            this.currentMonth++;
-        }
+    _nextWeek() {
+        const date = new Date(this.currentWeek);
+        date.setDate(date.getDate() + 7);
+        this.currentWeek = date;
     }
 
 }

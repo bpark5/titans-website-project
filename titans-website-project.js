@@ -12,6 +12,7 @@ import "./titans-website-play-list.js";
 import "./titans-website-play-list-slide.js";
 import "./titans-website-slide-arrow.js";
 import "./titans-website-schedule.js";
+import "./titans-website-weekly-schedule.js";
 import "./titans-website-pics.js";
 import "./titans-website-stats.js";
 import "./titans-website-socials.js";
