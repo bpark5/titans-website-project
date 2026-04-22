@@ -24,11 +24,11 @@ export class TitansWebsiteContacts extends DDDSuper(I18NMixin(LitElement)) {
 
         .contact-card {
             background: white;
-            border-radius: 8px;
+            border-radius: 16px;
             padding: 24px;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
             display: grid;
-            gap: 12px;
+            gap: 16px;
         }
 
         .row {

@@ -34,7 +34,7 @@ export class TitansWebsitePics extends DDDSuper(I18NMixin(LitElement)) {
         src: "https://chatgpt.com/backend-api/estuary/public_content/enc/eyJpZCI6Im1fNjllNjM3YzgyZjBjODE5MWIyYWYwODM4YjZlZTQ0ODQ6ZmlsZV8wMDAwMDAwMDY0OTA3MWZkOWFjYWFhOWY4M2MzMTI0NyIsInRzIjoiMjA1NjMiLCJwIjoicHlpIiwiY2lkIjoiMSIsInNpZyI6ImE0MzA4NjU3YjJiNGU4YTIwMWM2MzA2NGQ0MjdlMjExYjkxNjQ5ODJkYzkxNWI1MmJlYmYzZmY1MWI1NmM1ZGUiLCJ2IjoiMCIsImdpem1vX2lkIjpudWxsLCJjcyI6bnVsbCwiY2RuIjpudWxsLCJjcCI6bnVsbCwibWEiOm51bGx9",
       },
       {
-        title: "Poney League",
+        title: "Pony League",
         src: "https://tse3.mm.bing.net/th/id/OIP.S_QpnpRTuEcUrTaLkVQkHwHaHa?rs=1&pid=ImgDetMain&o=7&rm=3",
       },
       {

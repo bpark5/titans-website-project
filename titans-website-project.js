@@ -16,6 +16,7 @@ import "./titans-website-pics.js";
 import "./titans-website-stats.js";
 import "./titans-website-socials.js";
 import "./titans-website-contacts.js";
+import "./titans-website-footer.js";
 
 
 /**
@@ -59,7 +60,14 @@ export class TitansWebsiteProject extends DDDSuper(I18NMixin(LitElement)) {
         }
 
         .section {
-          margin: 32px 0;
+          margin-top: 32px;
+        }
+
+        .section-card {
+          background: white;
+          border-radius: 22px;
+          padding: 28px;
+          box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
         }
 
         .section-title {
@@ -70,6 +78,20 @@ export class TitansWebsiteProject extends DDDSuper(I18NMixin(LitElement)) {
           border-left: 6px solid #4b92db;
           padding-left: 12px;
         }
+
+          .wrapper {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 24px 32px 24px;
+        }
+
+        titans-website-schedule {
+          display: block;
+          margin: 24px 0 40px 0;
+        }
+
+            
+          
       `,
     ];
   }
@@ -88,11 +110,32 @@ export class TitansWebsiteProject extends DDDSuper(I18NMixin(LitElement)) {
           <titans-website-play-list-slide slideImage="https://a57.foxnews.com/static.foxnews.com/foxnews.com/content/uploads/2026/03/1200/675/paul-skenes-opening-day-1.jpg?ve=1&tl=1"></titans-website-play-list-slide>
         </titans-website-play-list>
         <titans-website-schedule></titans-website-schedule>
+
+
+          <div class="section">
+            <div class="section-card">
+              <div class="section-title">Team Highlights</div>
         <titans-website-pics></titans-website-pics>
+        </div>
+        </div>
+
+        <div class="section">
+          <div class="section-card">
+            <div class="section-title">Team Stats</div>
         <titans-website-stats></titans-website-stats>
+        </div>
+        </div>
+        
+        <div class="section">
+          <div class="section-card">
+            <div class="section-title">Connect with Us</div>
         <titans-website-socials></titans-website-socials>
         <titans-website-contacts></titans-website-contacts>
-    </div>`;
+        </div>
+        </div>
+    </div>
+     <titans-website-footer></titans-website-footer>
+     `;
   }
 }
 
