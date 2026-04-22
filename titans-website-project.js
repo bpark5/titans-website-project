@@ -79,19 +79,6 @@ export class TitansWebsiteProject extends DDDSuper(I18NMixin(LitElement)) {
           padding-left: 12px;
         }
 
-          .wrapper {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 24px 32px 24px;
-        }
-
-        titans-website-schedule {
-          display: block;
-          margin: 24px 0 40px 0;
-        }
-
-            
-          
       `,
     ];
   }
@@ -103,29 +90,26 @@ export class TitansWebsiteProject extends DDDSuper(I18NMixin(LitElement)) {
     <div class="wrapper">
         <titans-website-profile-picture username="Random username"></titans-website-profile-picture>
         <titans-website-nav-bar 
-          logoSrc="https://chatgpt.com/backend-api/estuary/public_content/enc/eyJpZCI6Im1fNjllNjM1MjI4Mjg4ODE5MTk3Y2IyYTg5ZGIyYjdmOWI6ZmlsZV8wMDAwMDAwMDk2OTA3MWY4YTZkYjU0MTU4YjJmMjk2OSIsInRzIjoiMjA1NjMiLCJwIjoicHlpIiwiY2lkIjoiMSIsInNpZyI6ImE4Yzc0MWNhMjQyNjM5NGI2YmYzNDc5NzZjZmY5MDgwZTI2ODgwOGU5MWY5MzZmMzJmNDA5OTFiYWJjODczNjIiLCJ2IjoiMCIsImdpem1vX2lkIjpudWxsLCJjcyI6bnVsbCwiY2RuIjpudWxsLCJjcCI6bnVsbCwibWEiOm51bGx9"> //placeholder for right now
+          logoSrc="https://chatgpt.com/backend-api/estuary/public_content/enc/eyJpZCI6Im1fNjllNjM1MjI4Mjg4ODE5MTk3Y2IyYTg5ZGIyYjdmOWI6ZmlsZV8wMDAwMDAwMDk2OTA3MWY4YTZkYjU0MTU4YjJmMjk2OSIsInRzIjoiMjA1NjMiLCJwIjoicHlpIiwiY2lkIjoiMSIsInNpZyI6ImE4Yzc0MWNhMjQyNjM5NGI2YmYzNDc5NzZjZmY5MDgwZTI2ODgwOGU5MWY5MzZmMzJmNDA5OTFiYWJjODczNjIiLCJ2IjoiMCIsImdpem1vX2lkIjpudWxsLCJjcyI6bnVsbCwiY2RuIjpudWxsLCJjcCI6bnVsbCwibWEiOm51bGx9">
         </titans-website-nav-bar>
         <titans-website-play-list>
           <titans-website-play-list-slide slideImage="https://encrypted-tbn2.gstatic.com/licensed-image?q=tbn:ANd9GcRIiww5ye8cvdDtVB1SJC8Lp7TL8nxBSlaTvCMTxkhm8afn5fVAPWYEZb3D6xNUkuds07FPw2lkCuCSa-Q"></titans-website-play-list-slide>
           <titans-website-play-list-slide slideImage="https://a57.foxnews.com/static.foxnews.com/foxnews.com/content/uploads/2026/03/1200/675/paul-skenes-opening-day-1.jpg?ve=1&tl=1"></titans-website-play-list-slide>
         </titans-website-play-list>
         <titans-website-schedule></titans-website-schedule>
-
-
+        <titans-website-weekly-schedule></titans-website-weekly-schedule>
           <div class="section">
             <div class="section-card">
               <div class="section-title">Team Highlights</div>
-        <titans-website-pics></titans-website-pics>
+            <titans-website-pics></titans-website-pics>
+          </div>
         </div>
-        </div>
-
         <div class="section">
           <div class="section-card">
             <div class="section-title">Team Stats</div>
-        <titans-website-stats></titans-website-stats>
-        </div>
-        </div>
-        
+              <titans-website-stats></titans-website-stats>
+            </div>
+          </div>
         <div class="section">
           <div class="section-card">
             <div class="section-title">Connect with Us</div>

@@ -7,15 +7,15 @@ import { DDDSuper } from "@haxtheweb/d-d-d/d-d-d.js";
 import { I18NMixin } from "@haxtheweb/i18n-manager/lib/I18NMixin.js";
 
 /**
- * `titans-website-schedule`
+ * `titans-website-weekly-schedule`
  * 
  * @demo index.html
- * @element titans-website-schedule
+ * @element titans-website-weekly-schedule
  */
-export class TitansWebsiteSchedule extends DDDSuper(I18NMixin(LitElement)) {
+export class TitansWebsiteWeeklySchedule extends DDDSuper(I18NMixin(LitElement)) {
 
     static get tag() {
-        return "titans-website-schedule";
+        return "titans-website-weekly-schedule";
     }
 
     constructor() {
@@ -87,6 +87,7 @@ export class TitansWebsiteSchedule extends DDDSuper(I18NMixin(LitElement)) {
             gap: 5px;
             padding: var(--ddd-spacing-4);
             color: var(--ddd-theme-default-shrineLight);
+            
             text-align: center;
         }
 
@@ -136,8 +137,8 @@ export class TitansWebsiteSchedule extends DDDSuper(I18NMixin(LitElement)) {
         } 
 
         return html`
-        <div class="calendar-wrapper">
-            <div class="calendar-header">
+        <div class="week-wrapper">
+            <div class="week-header">
                 <button class="prev-month" @click=${this._prevMonth}> Previous</button>
                 <span class="date">${nameOfMonth} ${this.currentYear}</span>
                 <button class="next-month" @click=${this._nextMonth}>Next</button>
@@ -181,4 +182,4 @@ export class TitansWebsiteSchedule extends DDDSuper(I18NMixin(LitElement)) {
 
 }
 
-globalThis.customElements.define(TitansWebsiteSchedule.tag, TitansWebsiteSchedule);
+globalThis.customElements.define(TitansWebsiteWeeklySchedule.tag, TitansWebsiteWeeklySchedule);

@@ -49,14 +49,15 @@ export class TitansWebsiteSlideArrow extends DDDSuper(I18NMixin(LitElement)) {
       }
 
         .left-arrow, .right-arrow {
-        background-color: var(--ddd-theme-default-white);
-        color: var(--ddd-theme-default-link);
-        border: var(--ddd-border-md);
-        border-color: var(--ddd-theme-default-link);
-        padding: var(--ddd-spacing-1) var(--ddd-spacing-3);
-        border-radius: var(--ddd-radius-circle);
-        font-size: var(--ddd-font-size-xs);
-        cursor: pointer;
+            background-color: var(--ddd-theme-default-white);
+            color: var(--ddd-theme-default-link);
+            border: var(--ddd-border-md);
+            border-color: var(--ddd-theme-default-link);
+            padding: var(--ddd-spacing-1) var(--ddd-spacing-3);
+            border-radius: var(--ddd-radius-circle);
+            font-size: var(--ddd-font-size-xs);
+            margin: var(--ddd-spacing-5);
+            cursor: pointer;
         }
 
         .left-arrow:hover, .right-arrow:hover {
