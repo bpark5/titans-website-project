@@ -127,7 +127,7 @@ export class TitansWebsiteNavBar extends DDDSuper(I18NMixin(LitElement)) {
                     <button class="about-button">About</button>
                     <div class="about-dropdown">
                         <a href="/about">About Page</a>
-                        <a href="/about/contact">Contact</a>
+                        <a href="/contact">Contact</a>
                     </div>
                 </div>
                 
