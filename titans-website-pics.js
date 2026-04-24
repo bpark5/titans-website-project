@@ -31,7 +31,7 @@ export class TitansWebsitePics extends DDDSuper(I18NMixin(LitElement)) {
     this.pictures = [
       {
         title: "Team Photo",
-        src: "./images/team-photo.png",
+        src: "./public/league-logo.png",
       },
       {
         title: "Pony League",
@@ -39,11 +39,11 @@ export class TitansWebsitePics extends DDDSuper(I18NMixin(LitElement)) {
       },
       {
         title: "Team Gear",
-        src: "./images/team-gear.png",
+        src: "./public/team-gear.png",
       },
       {
         title: "Local Division",
-        src: "./images/league-logo.png",
+        src: "./public/league-logo.png",
       },
 
     ];
