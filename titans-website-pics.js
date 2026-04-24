@@ -31,7 +31,7 @@ export class TitansWebsitePics extends DDDSuper(I18NMixin(LitElement)) {
     this.pictures = [
       {
         title: "Team Photo",
-        src: "https://chatgpt.com/backend-api/estuary/public_content/enc/eyJpZCI6Im1fNjllNjM3YzgyZjBjODE5MWIyYWYwODM4YjZlZTQ0ODQ6ZmlsZV8wMDAwMDAwMDY0OTA3MWZkOWFjYWFhOWY4M2MzMTI0NyIsInRzIjoiMjA1NjMiLCJwIjoicHlpIiwiY2lkIjoiMSIsInNpZyI6ImE0MzA4NjU3YjJiNGU4YTIwMWM2MzA2NGQ0MjdlMjExYjkxNjQ5ODJkYzkxNWI1MmJlYmYzZmY1MWI1NmM1ZGUiLCJ2IjoiMCIsImdpem1vX2lkIjpudWxsLCJjcyI6bnVsbCwiY2RuIjpudWxsLCJjcCI6bnVsbCwibWEiOm51bGx9",
+        src: "./images/team-photo.png",
       },
       {
         title: "Pony League",
@@ -39,12 +39,11 @@ export class TitansWebsitePics extends DDDSuper(I18NMixin(LitElement)) {
       },
       {
         title: "Team Gear",
-        src: "https://chatgpt.com/backend-api/estuary/public_content/enc/eyJpZCI6Im1fNjllNjM4ODBhZjkwODE5MThjZTE4ODE5ZmFlYjM4Nzc6ZmlsZV8wMDAwMDAwMGExNzA3MWZkYTkxY2IzNDkxNjhlMjMyYSIsInRzIjoiMjA1NjMiLCJwIjoicHlpIiwiY2lkIjoiMSIsInNpZyI6ImYzMThhMGVmNDQ0MzQ5ZTg3YzEyZmFhYjk0YzBlOTMzNmE2NjQzOThlZGYxZWM1NWU0Nzk0ZmMyOGZkMDJjZDciLCJ2IjoiMCIsImdpem1vX2lkIjpudWxsLCJjcyI6bnVsbCwiY2RuIjpudWxsLCJjcCI6bnVsbCwibWEiOm51bGx9",
+        src: "./images/team-gear.png",
       },
       {
         title: "Local Division",
-        src: "https://chatgpt.com/backend-api/estuary/content?id=file_000000008bf471f884a17dfe138cf06c&ts=493526&p=fs&cid=1&sig=76cdd066ac4971cccaf86a0d3a4359c5cbdc2fed67594fcecf2d07d3d8e92d55&v=0",
-
+        src: "./images/league-logo.png",
       },
 
     ];
@@ -56,26 +55,31 @@ export class TitansWebsitePics extends DDDSuper(I18NMixin(LitElement)) {
       css`
       :host {
         display: block;
+        width: 100%;
       }
       .grid {
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
         gap: 16px;
+        width: 100%;
       }
 
       .card {
-        background: white;
+        background: var(--ddd-theme-default-white);
         border-radius: 16px;
         overflow: hidden;
         box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
         text-align: center;
         padding: 12px;
+        min-width: 0;
       }
 
       img {
         width: 100%;
-        height: 120px;
-        object-fit: cover;
+        height: 190px;
+        object-fit: contain;
+        object-position: center;
+        background: var(--ddd-theme-default-white);
         border-radius: 12px;
         display: block;
       }
@@ -84,6 +88,17 @@ export class TitansWebsitePics extends DDDSuper(I18NMixin(LitElement)) {
         margin-top: 10px;
         font-weight: 700;
         color: #333;
+      }
+
+      @media (max-width: 900px) {
+        .grid {
+          grid-template-columns: repeat(2, minmax(0, 1fr));
+        }
+      }
+      @media (max-width: 500px) {
+        .grid {
+          grid-template-columns: 1fr;
+        }
       }
       `,
     ];
