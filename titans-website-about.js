@@ -94,8 +94,7 @@ export class TitansWebsiteAbout extends DDDSuper(I18NMixin(LitElement)) {
 
         <titans-website-profile-picture username="Brandons Mamama"></titans-website-profile-picture>
         <titans-website-nav-bar
-            Src="./public/png"   
-            logoDescription="Timber Titans Athletics logo">
+            src="./public/team-logo.png" alt ="Timber Titans Athletics logo"/>
         </titans-website-nav-bar>
         <div class="content">
             <h1 class="section-title">About Us</h1>
