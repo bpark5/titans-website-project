@@ -31,7 +31,7 @@ export class TitansWebsitePics extends DDDSuper(I18NMixin(LitElement)) {
     this.pictures = [
       {
         title: "Team Photo",
-        src: "./public/league-logo.png",
+        src: "./public/team-photo.png",
       },
       {
         title: "Pony League",
