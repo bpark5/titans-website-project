@@ -98,6 +98,11 @@ export class TitansWebsiteProject extends DDDSuper(I18NMixin(LitElement)) {
       return html`
         <titans-website-dropdown-contacts></titans-website-dropdown-contacts>
       `;
+    if (path === "/schedule") {
+      return html `
+        <titans-website-schedule></titans-website-schedule>
+      `;
+    }
     }
     return html`
     <div class="wrapper">
@@ -109,7 +114,6 @@ export class TitansWebsiteProject extends DDDSuper(I18NMixin(LitElement)) {
           <titans-website-play-list-slide slideImage="https://encrypted-tbn2.gstatic.com/licensed-image?q=tbn:ANd9GcRIiww5ye8cvdDtVB1SJC8Lp7TL8nxBSlaTvCMTxkhm8afn5fVAPWYEZb3D6xNUkuds07FPw2lkCuCSa-Q"></titans-website-play-list-slide>
           <titans-website-play-list-slide slideImage="https://a57.foxnews.com/static.foxnews.com/foxnews.com/content/uploads/2026/03/1200/675/paul-skenes-opening-day-1.jpg?ve=1&tl=1"></titans-website-play-list-slide>
         </titans-website-play-list>
-        <titans-website-schedule></titans-website-schedule>
         <titans-website-weekly-schedule></titans-website-weekly-schedule>
           <div class="section">
             <div class="section-card">
