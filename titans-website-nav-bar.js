@@ -47,6 +47,7 @@ export class TitansWebsiteNavBar extends DDDSuper(I18NMixin(LitElement)) {
             background-color: var(--ddd-theme-default-beaverBlue);
             display: flex;
             align-items: center;
+            padding: var(--ddd-spacing-5);
         }
         
         .logo-section img {

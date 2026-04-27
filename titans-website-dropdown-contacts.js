@@ -2,7 +2,6 @@ import { LitElement, html, css } from "lit";
 import { DDDSuper } from "@haxtheweb/d-d-d/d-d-d.js";
 import { I18NMixin } from "@haxtheweb/i18n-manager/lib/I18NMixin.js";
 
-import "./titans-website-profile-picture.js";
 import "./titans-website-nav-bar.js";
 import "./titans-website-footer.js";
 /**
@@ -109,7 +108,6 @@ export class TitansWebsiteDropdownContacts extends DDDSuper(I18NMixin(LitElement
 
   render() {
     return html`
-    <titans-website-profile-picture username="Brandons Mamama"></titans-website-profile-picture>
          <titans-website-nav-bar
             logoSrc="https://chatgpt.com/backend-api/estuary/public_content/enc/eyJpZCI6Im1fNjllNjM1MjI4Mjg4ODE5MTk3Y2IyYTg5ZGIyYjdmOWI6ZmlsZV8wMDAwMDAwMDk2OTA3MWY4YTZkYjU0MTU4YjJmMjk2OSIsInRzIjoiMjA1NjMiLCJwIjoicHlpIiwiY2lkIjoiMSIsInNpZyI6ImE4Yzc0MWNhMjQyNjM5NGI2YmYzNDc5NzZjZmY5MDgwZTI2ODgwOGU5MWY5MzZmMzJmNDA5OTFiYWJjODczNjIiLCJ2IjoiMCIsImdpem1vX2lkIjpudWxsLCJjcyI6bnVsbCwiY2RuIjpudWxsLCJjcCI6bnVsbCwibWEiOm51bGx9"   
             logoDescription="Penn State Athletics logo">
