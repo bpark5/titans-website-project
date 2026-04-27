@@ -94,15 +94,15 @@ export class TitansWebsiteAbout extends DDDSuper(I18NMixin(LitElement)) {
 
         <titans-website-profile-picture username="Brandons Mamama"></titans-website-profile-picture>
         <titans-website-nav-bar
-            logoSrc="https://chatgpt.com/backend-api/estuary/public_content/enc/eyJpZCI6Im1fNjllNjM1MjI4Mjg4ODE5MTk3Y2IyYTg5ZGIyYjdmOWI6ZmlsZV8wMDAwMDAwMDk2OTA3MWY4YTZkYjU0MTU4YjJmMjk2OSIsInRzIjoiMjA1NjMiLCJwIjoicHlpIiwiY2lkIjoiMSIsInNpZyI6ImE4Yzc0MWNhMjQyNjM5NGI2YmYzNDc5NzZjZmY5MDgwZTI2ODgwOGU5MWY5MzZmMzJmNDA5OTFiYWJjODczNjIiLCJ2IjoiMCIsImdpem1vX2lkIjpudWxsLCJjcyI6bnVsbCwiY2RuIjpudWxsLCJjcCI6bnVsbCwibWEiOm51bGx9"   
-            logoDescription="Penn State Athletics logo">
+            Src="./public/png"   
+            logoDescription="Timber Titans Athletics logo">
         </titans-website-nav-bar>
         <div class="content">
             <h1 class="section-title">About Us</h1>
             <p class="about-section">The Titans are a youth baseball team based in State College, Pennsylvania. We are dedicated to fostering a love for the game of baseball while promoting teamwork, sportsmanship, and personal growth among our players. Our team is made up of talented and passionate young athletes who are committed to improving their skills and competing at a high level.</p>
 
             <div class="image-wrapper">
-                <img src="${this.teamPhoto}" alt="Team photo of the Titans baseball team
+                <img src="./public/team-photo.png" alt="Team photo of the Titans baseball team
                 "/>
             </div>
 
