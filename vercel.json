@@ -1,9 +1,0 @@
-{
-  "outputDirectory": "public",
-  "rewrites": [
-    { "source": "/about", "destination": "/" },
-    { "source": "/contact", "destination": "/" },
-    { "source": "/schedule", "destination": "/" },
-    { "source": "/roster", "destination": "/" }
-  ]
-}
