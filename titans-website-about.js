@@ -90,7 +90,7 @@ export class TitansWebsiteAbout extends DDDSuper(I18NMixin(LitElement)) {
     }
     render() {
         return html`
-        <titans-website-nav-bar></titans-website-nav-bar>
+        <titans-website-nav-bar logoSrc="./images/Team-logo.png"></titans-website-nav-bar>
         <div class="content">
             <h1 class="section-title">About Us</h1>
             <p class="about-section">The Titans are a youth baseball team based in State College, Pennsylvania. We are dedicated to fostering a love for the game of baseball while promoting teamwork, sportsmanship, and personal growth among our players. Our team is made up of talented and passionate young athletes who are committed to improving their skills and competing at a high level.</p>
@@ -105,6 +105,7 @@ export class TitansWebsiteAbout extends DDDSuper(I18NMixin(LitElement)) {
                 <p>Our mission is to provide a positive and inclusive environment where young athletes can develop their baseball skills, build lasting friendships, and learn valuable life lessons. We strive to create a supportive community that encourages players to reach their full potential both on and off the field.</p>
             </div>
         </div>
+        <titans-website-weekly-schedule></titans-website-weekly-schedule>
         <titans-website-footer></titans-website-footer>
         `;
     }
