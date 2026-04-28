@@ -17,7 +17,7 @@ export class TitansWebsiteAbout extends DDDSuper(I18NMixin(LitElement)) {
     }
     constructor() {
             super();
-            this.teamPhoto = "https://chatgpt.com/backend-api/estuary/public_content/enc/eyJpZCI6Im1fNjllNjM3YzgyZjBjODE5MWIyYWYwODM4YjZlZTQ0ODQ6ZmlsZV8wMDAwMDAwMDY0OTA3MWZkOWFjYWFhOWY4M2MzMTI0NyIsInRzIjoiMjA1NjMiLCJwIjoicHlpIiwiY2lkIjoiMSIsInNpZyI6ImE0MzA4NjU3YjJiNGU4YTIwMWM2MzA2NGQ0MjdlMjExYjkxNjQ5ODJkYzkxNWI1MmJlYmYzZmY1MWI1NmM1ZGUiLCJ2IjoiMCIsImdpem1vX2lkIjpudWxsLCJjcyI6bnVsbCwiY2RuIjpudWxsLCJjcCI6bnVsbCwibWEiOm51bGx9";
+            this.teamPhoto = "./images/team-photo.png";
         }
 
     static get properties() {
@@ -90,15 +90,13 @@ export class TitansWebsiteAbout extends DDDSuper(I18NMixin(LitElement)) {
     }
     render() {
         return html`
-        <titans-website-nav-bar
-            src="./public/team-logo.png" alt ="Timber Titans Athletics logo"/>
-        </titans-website-nav-bar>
+        <titans-website-nav-bar></titans-website-nav-bar>
         <div class="content">
             <h1 class="section-title">About Us</h1>
             <p class="about-section">The Titans are a youth baseball team based in State College, Pennsylvania. We are dedicated to fostering a love for the game of baseball while promoting teamwork, sportsmanship, and personal growth among our players. Our team is made up of talented and passionate young athletes who are committed to improving their skills and competing at a high level.</p>
 
             <div class="image-wrapper">
-                <img src="./public/team-photo.png" alt="Team photo of the Titans baseball team
+                <img src="./images/team-photo.png" alt="Team photo of the Titans baseball team
                 "/>
             </div>
 

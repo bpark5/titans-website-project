@@ -87,21 +87,41 @@ export class TitansWebsiteProject extends DDDSuper(I18NMixin(LitElement)) {
   
 
   render() {
-    const path = window.location.pathname;
-    if (path === "/about") {
+    const params = new URLSearchParams(window.location.search);
+    const path = params.get("page");
+    if (path === "about") {
       return html`
         <titans-website-about></titans-website-about>
       `;
     }
-    if (path === "/contact") {
+    if (path === "contact") {
       return html`
         <titans-website-dropdown-contacts></titans-website-dropdown-contacts>
       `;
-    if (path === "/schedule") {
+    }
+      if (path === "schedule") {
       return html `
-        <titans-website-schedule></titans-website-schedule>
+        <titans-website-nav-bar></titans-website-nav-bar>
+        <div class="page">
+          <div class="section-card">
+            <div class="section-title">Weekly Schedule</div>
+            <titans-website-weekly-schedule></titans-website-weekly-schedule>
+          </div>
+        </div>
+        <titans-website-footer></titans-website-footer>
       `;
     }
+    if (path === "roster") {
+      return html `
+        <titans-website-nav-bar></titans-website-nav-bar>
+        <div class="page">
+          <div class="section-card">
+            <div class="section-title">Team Roster</div>
+            <titans-website-pics></titans-website-pics>
+          </div>
+        </div>
+        <titans-website-footer></titans-website-footer>
+      `;
     }
     return html`
     <div class="wrapper">

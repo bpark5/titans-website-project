@@ -40,7 +40,7 @@ export class TitansWebsiteDropdownContacts extends DDDSuper(I18NMixin(LitElement
         css`
         :host {
             display: block;
-            min-hight: 100px;
+            min-height: 100px;
             background: var(--ddd-theme-default-nittanyNavy);
             color: var(--ddd-theme-default-white);
         }

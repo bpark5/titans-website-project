@@ -31,7 +31,7 @@ export class TitansWebsitePics extends DDDSuper(I18NMixin(LitElement)) {
     this.pictures = [
       {
         title: "Team Photo",
-        src: "./public/team-photo.png",
+        src: "./images/team-photo.png",
       },
       {
         title: "Pony League",
@@ -39,11 +39,11 @@ export class TitansWebsitePics extends DDDSuper(I18NMixin(LitElement)) {
       },
       {
         title: "Team Gear",
-        src: "./public/team-gear.png",
+        src: "./images/team-gear.png",
       },
       {
         title: "Local Division",
-        src: "./public/league-logo.png",
+        src: "./images/league-logo.png",
       },
 
     ];
@@ -110,7 +110,7 @@ export class TitansWebsitePics extends DDDSuper(I18NMixin(LitElement)) {
         ${this.pictures.map(
           (picture) => html`
             <div class="card">
-              <img src="${picture.src}" alt="${picture.title}" />
+              <img src="${picture.src}" alt="${picture.title}" loading="lazy" />
               <div class="label">${picture.title}</div>
             </div>
           `
