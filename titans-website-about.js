@@ -90,15 +90,13 @@ export class TitansWebsiteAbout extends DDDSuper(I18NMixin(LitElement)) {
     }
     render() {
         return html`
-        <titans-website-nav-bar
-            src="./public/team-logo.png" alt ="Timber Titans Athletics logo"/>
-        </titans-website-nav-bar>
+        <titans-website-nav-bar></titans-website-nav-bar>
         <div class="content">
             <h1 class="section-title">About Us</h1>
             <p class="about-section">The Titans are a youth baseball team based in State College, Pennsylvania. We are dedicated to fostering a love for the game of baseball while promoting teamwork, sportsmanship, and personal growth among our players. Our team is made up of talented and passionate young athletes who are committed to improving their skills and competing at a high level.</p>
 
             <div class="image-wrapper">
-                <img src="./public/team-photo.png" alt="Team photo of the Titans baseball team
+                <img src="./images/team-photo.png" alt="Team photo of the Titans baseball team
                 "/>
             </div>
 
