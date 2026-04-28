@@ -102,13 +102,8 @@ export class TitansWebsiteProject extends DDDSuper(I18NMixin(LitElement)) {
       if (path === "schedule") {
       return html `
         <titans-website-nav-bar logoSrc="./images/Team-logo.png"></titans-website-nav-bar>
-        <div class="page">
-          <titans-website-schedule></titans-website-schedule>
-          <div class="section-card">
-            <div class="section-title">Weekly Schedule</div>
-            <titans-website-weekly-schedule></titans-website-weekly-schedule>
-          </div>
-        </div>
+        <titans-website-schedule></titans-website-schedule>
+        <titans-website-weekly-schedule></titans-website-weekly-schedule>
         <titans-website-footer></titans-website-footer>
       `;
     }
@@ -124,6 +119,7 @@ export class TitansWebsiteProject extends DDDSuper(I18NMixin(LitElement)) {
         <titans-website-footer></titans-website-footer>
       `;
     }
+    
     return html`
     <div class="wrapper">
         <titans-website-nav-bar 

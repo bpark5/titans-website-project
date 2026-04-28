@@ -22,6 +22,7 @@ export class TitansWebsiteSchedule extends DDDSuper(I18NMixin(LitElement)) {
         super();
         this.currentMonth = new Date().getMonth();
         this.currentYear = new Date().getFullYear();
+        this.games = [];
     }
 
     static get properties() {
@@ -30,6 +31,7 @@ export class TitansWebsiteSchedule extends DDDSuper(I18NMixin(LitElement)) {
             title: { type: String },
             currentMonth: {type: Number},
             currentYear: {type: Number},
+            games: {type: Array}
         };
     }
 
@@ -42,6 +44,7 @@ export class TitansWebsiteSchedule extends DDDSuper(I18NMixin(LitElement)) {
 
         .calendar-wrapper {
             background-color: light-dark(var(--ddd-theme-default-limestoneLight),var(--ddd-theme-default-nittanyNavy));
+            padding-bottom: var(--ddd-spacing-5);
         }
 
         .calendar-header {
@@ -62,7 +65,7 @@ export class TitansWebsiteSchedule extends DDDSuper(I18NMixin(LitElement)) {
             color: var(--ddd-theme-default-shrineLight);
         }
 
-        .prev-month:hover, .next-month:hover, .prev-month:focus, .next-month:focus {
+        .prev-month:hover, .next-month:hover {
             opacity: 0.9;
             transform: scale(1.05);
             transition: 0.3s;
@@ -77,14 +80,14 @@ export class TitansWebsiteSchedule extends DDDSuper(I18NMixin(LitElement)) {
         .calendar-grid {
             display: grid;
             grid-template-columns: repeat(7, 1fr);
-            gap: 5px;
+            gap: var(--ddd-spacing-1);
             padding: var(--ddd-spacing-4);
         }
 
         .days-header {
             display: grid;
             grid-template-columns: repeat(7, 1fr);
-            gap: 5px;
+            gap: var(--ddd-spacing-1);
             padding: var(--ddd-spacing-4);
             color: var(--ddd-theme-default-shrineLight);
             text-align: center;
@@ -109,6 +112,13 @@ export class TitansWebsiteSchedule extends DDDSuper(I18NMixin(LitElement)) {
         .day-number {
             display: block;
             color: var(--ddd-theme-default-info);
+            margin-bottom: var(--ddd-spacing-1);
+        }
+
+        .game-tag {
+            color: var(--ddd-theme-default-info);            
+            font: var(--ddd-font-primary);
+            font-size: var(--ddd-font-size-4xs);
         }
 
     `];
@@ -127,9 +137,21 @@ export class TitansWebsiteSchedule extends DDDSuper(I18NMixin(LitElement)) {
 
         const dayCells = [];
         for (let i = 1; i <= daysInMonth; i++) {
+            const date = new Date(this.currentYear, this.currentMonth, i);
+            const dateStr = date.toISOString().split('T')[0];
+            const game = this.games.find(g => g.date === dateStr);
+            let gameTag = ' ';
+            if (game) {
+                gameTag = html`
+                    <div class="game-tag">
+                        ${game.title} ${game.location} ${game.time}
+                    </div>
+                `
+            }
             dayCells.push(html`
             <div class="day">
                 <span class="day-number">${i}</span>
+                ${gameTag}
             </div>
             `);
         } 
@@ -156,6 +178,25 @@ export class TitansWebsiteSchedule extends DDDSuper(I18NMixin(LitElement)) {
             </div>
         </div> 
         `;
+    }
+
+    connectedCallback() {
+        super.connectedCallback();
+        this.getScheduleInformation();
+    }
+
+    getScheduleInformation() {
+        fetch("schedule.json").then((resp) => {
+            if (resp.ok) {
+                return resp.json();
+            }
+            else {
+                throw new Error("Failed to load JSON");
+            }
+        })
+        .then((data) => {
+            this.games = data.games;
+        })
     }
 
     _prevMonth() {

@@ -112,15 +112,17 @@ export class TitansWebsiteNavBar extends DDDSuper(I18NMixin(LitElement)) {
         return html`
         <div class="header">
             <div class="logo-section">
-                <img src=${this.logoSrc} alt=${this.logoDescription} />
+                <a href="/?page=home">
+                    <img src=${this.logoSrc} alt=${this.logoDescription} />
+                </a>
             </div>
             <div class="buttons">
                 <div class="dropdown-button">
                     <button class="schedule-button">Schedule</button>
                     <div class="schedule-dropdown">
                         <a href="/?page=schedule">Schedule Page</a>
-                        <a href="/?page=games">Games</a>
-                        <a href="/?page=practice">Practice</a>
+                        <a href="/?page=schedule">Games</a>
+                        <a href="/?page=schedule">Practice</a>
                     </div>
                 </div>
                 <button class="roster-button" @click=${() => window.location.href = '/?page=roster'}>Roster</button>
