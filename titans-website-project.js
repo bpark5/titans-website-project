@@ -98,6 +98,7 @@ export class TitansWebsiteProject extends DDDSuper(I18NMixin(LitElement)) {
       return html`
         <titans-website-dropdown-contacts></titans-website-dropdown-contacts>
       `;
+    }
       if (path === "schedule") {
       return html `
         <titans-website-nav-bar></titans-website-nav-bar>
@@ -121,7 +122,6 @@ export class TitansWebsiteProject extends DDDSuper(I18NMixin(LitElement)) {
         </div>
         <titans-website-footer></titans-website-footer>
       `;
-    }
     }
     return html`
     <div class="wrapper">
