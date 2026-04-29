@@ -21,7 +21,7 @@ export class TitansWebsiteWeeklySchedule extends DDDSuper(I18NMixin(LitElement))
     constructor() {
         super();
         const weekStart = new Date();
-        weekStart.setDate(weekStart.getDate() - weekStart.getDay())
+        weekStart.setDate(weekStart.getDate() - weekStart.getDay());
         this.currentWeek = weekStart;
         this.games = [];
     }
@@ -151,8 +151,8 @@ export class TitansWebsiteWeeklySchedule extends DDDSuper(I18NMixin(LitElement))
         const today = new Date();
         const weekCells = [];
             for (let i = 0; i < 7; i++) {
-            const day = new Date(this.currentWeek);
-            day.setDate(day.getDate() + i);
+            const day = new Date(this.currentWeek.getFullYear(), this.currentWeek.getMonth(), this.currentWeek.getDate() + i);
+            day.setDate(day.getDate());
             const dateStr = day.toISOString().split('T')[0];
             const game = this.games.find(g => g.date === dateStr);
             let gameTag = ' ';
@@ -207,7 +207,7 @@ export class TitansWebsiteWeeklySchedule extends DDDSuper(I18NMixin(LitElement))
     }
 
     getScheduleInformation() {
-        fetch("schedule.json").then((resp) => {
+        fetch("./api/schedule").then((resp) => {
             if (resp.ok) {
                 return resp.json();
             }

@@ -186,7 +186,7 @@ export class TitansWebsiteSchedule extends DDDSuper(I18NMixin(LitElement)) {
     }
 
     getScheduleInformation() {
-        fetch("schedule.json").then((resp) => {
+        fetch("./api/schedule").then((resp) => {
             if (resp.ok) {
                 return resp.json();
             }
