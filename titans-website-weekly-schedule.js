@@ -44,6 +44,7 @@ export class TitansWebsiteWeeklySchedule extends DDDSuper(I18NMixin(LitElement))
         .week-wrapper {
             background-color: light-dark(var(--ddd-theme-default-limestoneLight),var(--ddd-theme-default-nittanyNavy));
             padding-top: var(--ddd-spacing-15);
+            padding-bottom: var(--ddd-spacing-5);
         }
 
         .week-header {

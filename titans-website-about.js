@@ -87,7 +87,7 @@ export class TitansWebsiteAbout extends DDDSuper(I18NMixin(LitElement)) {
         }
         titans-website-footer {
             display: block;
-            margin-top: var(--ddd-spacing-5);
+            //margin-top: var(--ddd-spacing-5);
         }
     `,
     ];

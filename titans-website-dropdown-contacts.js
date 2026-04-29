@@ -28,7 +28,7 @@ export class TitansWebsiteDropdownContacts extends DDDSuper(I18NMixin(LitElement
         {
             name: "Brandon",
             role: "Head Coach",
-            email: "brandon.Park@titans.com",
+            email: "brandon.park@titans.com",
             phone: "555-987-6543"
         },
     ];
@@ -49,21 +49,25 @@ export class TitansWebsiteDropdownContacts extends DDDSuper(I18NMixin(LitElement
             padding: var(--ddd-spacing-5);
         }
         h1 {
-            font-size: 40px;
+            font-size: var(--ddd-font-size-l);
             margin-bottom: var(--ddd-spacing-3);
+            color: var(--ddd-theme-default-shrineLight);
         }
         .subtitle {
-            font-size: 20px;
+            font-size: var(--ddd-font-xxs);
             margin-bottom: var(--ddd-spacing-5);
+            color: var(--ddd-theme-default-shrineLight);
         }
         .contact-grid {
             display: flex;
             justify-content: center;
             gap: var(--ddd-spacing-5);
             flex-wrap: wrap;
+            padding-top: var(--ddd-spacing-6);
+            
         }
         .contact-card {
-            background: var(--ddd-theme-default-white);
+            background: var(--ddd-theme-default-shrineLight);
             color: var(--ddd-theme-default-beaverBlue);
             width: 320px;
             padding: var(--ddd-spacing-4);
@@ -72,7 +76,7 @@ export class TitansWebsiteDropdownContacts extends DDDSuper(I18NMixin(LitElement
             text-align: center;
         }
         .contact-card h2 {
-            font-size: 28px;
+            font-size: var(--ddd-font-size-ms);
             margin-bottom: var(--ddd-spacing-2);
         }
         .role {
@@ -80,7 +84,7 @@ export class TitansWebsiteDropdownContacts extends DDDSuper(I18NMixin(LitElement
             margin-bottom: var(--ddd-spacing-2);
         }
         .contact-info {
-            font-size: 16px;
+            font-size: var(--ddd-font-size-4);
             margin-bottom: var(--ddd-spacing-1);
         }
         a {
@@ -96,7 +100,7 @@ export class TitansWebsiteDropdownContacts extends DDDSuper(I18NMixin(LitElement
                 padding: var(--ddd-spacing-3);
             }
             h1 {
-                font-size: 32px;
+                font-size: var(--ddd-spacing-m);
             }
             .contact-card {
                 width: 100%;
@@ -109,7 +113,7 @@ export class TitansWebsiteDropdownContacts extends DDDSuper(I18NMixin(LitElement
   render() {
     return html`
          <titans-website-nav-bar
-            logoSrc="https://chatgpt.com/backend-api/estuary/public_content/enc/eyJpZCI6Im1fNjllNjM1MjI4Mjg4ODE5MTk3Y2IyYTg5ZGIyYjdmOWI6ZmlsZV8wMDAwMDAwMDk2OTA3MWY4YTZkYjU0MTU4YjJmMjk2OSIsInRzIjoiMjA1NjMiLCJwIjoicHlpIiwiY2lkIjoiMSIsInNpZyI6ImE4Yzc0MWNhMjQyNjM5NGI2YmYzNDc5NzZjZmY5MDgwZTI2ODgwOGU5MWY5MzZmMzJmNDA5OTFiYWJjODczNjIiLCJ2IjoiMCIsImdpem1vX2lkIjpudWxsLCJjcyI6bnVsbCwiY2RuIjpudWxsLCJjcCI6bnVsbCwibWEiOm51bGx9"   
+            logoSrc="./images/Team-logo.png"   
             logoDescription="Penn State Athletics logo">
         </titans-website-nav-bar>
         <div class="page">
@@ -127,7 +131,6 @@ export class TitansWebsiteDropdownContacts extends DDDSuper(I18NMixin(LitElement
                     </div>
                 `)}
             </div>
-            <titans-website-footer></titans-website-footer>
         </div>
     `;
   }

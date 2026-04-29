@@ -41,9 +41,10 @@ export class TitansWebsiteSocials extends DDDSuper(I18NMixin(LitElement)) {
       .socials {
         display: flex;
         flex-wrap: wrap;
-        gap: 16px;
+        gap: var(--ddd-spacing-4);
         justify-content: flex-start;
         align-items: center;
+        padding-bottom: var(--ddd-spacing-4);
       }
 
       .socials a {
@@ -53,9 +54,9 @@ export class TitansWebsiteSocials extends DDDSuper(I18NMixin(LitElement)) {
         width: fit-content;
         text-decoration: none;
         color: inherit;
-        background: #4b92db;
-        color: white;
-        padding: 10px 18px;
+        background: var(--ddd-theme-default-accent);
+        color: var(--ddd-theme-default-info);
+        padding: var(--ddd-spacing-3) var(--ddd-spacing-5);
         border-radius: 999px;
         font-weight: 700;
         transition: 0.2s ease;
@@ -63,8 +64,8 @@ export class TitansWebsiteSocials extends DDDSuper(I18NMixin(LitElement)) {
         }
 
     .socials a:hover {
-          background: #0c2340;
-          transform: translateY(-2px);
+          background-color: var(--ddd-theme-default-info);
+          color: var(--ddd-theme-default-shrineLight);
         }
       `,
     ];

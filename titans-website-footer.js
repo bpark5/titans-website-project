@@ -23,21 +23,19 @@ export class TitansWebsiteFooter extends DDDSuper(I18NMixin(LitElement)) {
         }  
 
         footer {
-            background: #4b92db;
-            color: white;
-            border-radius: 18px;
-            padding: 24px;
+            background: var(--ddd-theme-default-accent);
+            color: var(--ddd-theme-default-info);
+            padding: var(--ddd-spacing-6);
             text-align: center;
-            margin-top: 32px;
         }
 
         .main {
-            font-size: 16px;
+            font-size: var(--ddd-font-size-3xs);
             font-weight: 700;
-            margin-bottom: 8px;
+            margin-bottom: var(--ddd-spacing-2);
         }
         .sub {
-            font-size: 12px;
+            font-size: var(--ddd-font-size-4xs);
             font-weight: 400;
             opacity: 0.8;
         }

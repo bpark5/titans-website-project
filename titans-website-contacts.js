@@ -2,6 +2,7 @@ import { LitElement, html, css } from "lit";
 import { DDDSuper } from "@haxtheweb/d-d-d/d-d-d.js";
 import { I18NMixin } from "@haxtheweb/i18n-manager/lib/I18NMixin.js";
 
+
 /**
  * `titans-website-contacts`
  * 
@@ -26,7 +27,6 @@ export class TitansWebsiteContacts extends DDDSuper(I18NMixin(LitElement)) {
             background: white;
             border-radius: 16px;
             padding: 24px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
             display: grid;
             gap: 16px;
         }

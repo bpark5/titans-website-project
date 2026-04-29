@@ -60,24 +60,21 @@ export class TitansWebsiteProject extends DDDSuper(I18NMixin(LitElement)) {
           padding: 24px;
         }
 
-        .section {
-          margin-top: 32px;
-        }
-
         .section-card {
-          background: white;
-          border-radius: 22px;
-          padding: 28px;
-          box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+          background: light-dark(var(--ddd-theme-default-limestoneLight),var(--ddd-theme-default-nittanyNavy));
+          padding: var(--ddd-spacing-5);
         }
 
         .section-title {
           font-size: 1.5rem;
           font-weight: 700;
-          margin-bottom: 12px;
-          color: #0c2340;
-          border-left: 6px solid #4b92db;
-          padding-left: 12px;
+          padding-bottom: var(--ddd-spacing-3);
+          color: light-dark(var(--ddd-theme-default-info), var(--ddd-theme-default-shrineLight));
+          border-left: var(--ddd-border-lg);
+          border-color: light-dark(var(--ddd-theme-default-info), var(--ddd-theme-default-shrineLight));
+          padding-left: var(--ddd-spacing-2);
+          padding-bottom: var(--ddd-spacing-1);
+          margin-bottom: var(--ddd-spacing-2);
         }
 
       `,
@@ -97,6 +94,8 @@ export class TitansWebsiteProject extends DDDSuper(I18NMixin(LitElement)) {
     if (path === "contact") {
       return html`
         <titans-website-dropdown-contacts></titans-website-dropdown-contacts>
+        <titans-website-weekly-schedule></titans-website-weekly-schedule>
+        <titans-website-footer></titans-website-footer>
       `;
     }
       if (path === "schedule") {
