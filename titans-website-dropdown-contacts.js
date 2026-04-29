@@ -47,16 +47,17 @@ export class TitansWebsiteDropdownContacts extends DDDSuper(I18NMixin(LitElement
         .page {
             min-height: 70px;
             padding: var(--ddd-spacing-5);
+            background-color: light-dark(var(--ddd-theme-default-limestoneLight),var(--ddd-theme-default-nittanyNavy));
         }
         h1 {
             font-size: var(--ddd-font-size-l);
             margin-bottom: var(--ddd-spacing-3);
-            color: var(--ddd-theme-default-shrineLight);
+            color: light-dark(var(--ddd-theme-default-info), var(--ddd-theme-default-shrineLight));;
         }
         .subtitle {
             font-size: var(--ddd-font-xxs);
             margin-bottom: var(--ddd-spacing-5);
-            color: var(--ddd-theme-default-shrineLight);
+            color: light-dark(var(--ddd-theme-default-info), var(--ddd-theme-default-shrineLight));;
         }
         .contact-grid {
             display: flex;
