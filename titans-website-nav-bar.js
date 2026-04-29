@@ -22,6 +22,7 @@ export class TitansWebsiteNavBar extends DDDSuper(I18NMixin(LitElement)) {
         super();
         this.logoSrc = "";
         this.logoDescription = "Team logo";
+        this.menuOpen = false;
     }
 
     static get properties() {
@@ -30,6 +31,7 @@ export class TitansWebsiteNavBar extends DDDSuper(I18NMixin(LitElement)) {
             title: { type: String },
             logoSrc: {type: String},
             logoDescription: {type: String},
+            menuOpen: {type: Boolean}
         };
     }
 
@@ -139,7 +141,6 @@ export class TitansWebsiteNavBar extends DDDSuper(I18NMixin(LitElement)) {
 
         `;
     }
-
 }
 
 globalThis.customElements.define(TitansWebsiteNavBar.tag, TitansWebsiteNavBar);

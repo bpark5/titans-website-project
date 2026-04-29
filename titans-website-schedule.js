@@ -121,6 +121,29 @@ export class TitansWebsiteSchedule extends DDDSuper(I18NMixin(LitElement)) {
             font-size: var(--ddd-font-size-4xs);
         }
 
+        @media (max-width: 950px) {
+            .calendar-grid, .days-header {
+                gap: var(--ddd-spacing-1);
+                padding: var(--ddd-spacing-2);
+            }
+
+            .day, .day-empty {
+                min-height: 40px;
+                padding: var(--ddd-spacing-1);
+                font-size: var(--ddd-font-size-4xs);
+            }
+
+            .days-header span {
+                padding: var(--ddd-spacing-1);
+                font-size: var(--ddd-font-size-4xs);
+                overflow: hidden;
+            }
+
+            .date {
+                font-size: var(--ddd-font-size-s);
+            }
+        }
+
     `];
     }
 

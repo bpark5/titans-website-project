@@ -139,6 +139,32 @@ export class TitansWebsiteWeeklySchedule extends DDDSuper(I18NMixin(LitElement))
             border-color: var(--ddd-theme-default-accent);
         }
 
+        @media (max-width: 950px) {
+            .week-grid, .days-header {
+                gap: 2px;
+                padding: var(--ddd-spacing-2);
+            }
+
+            .day {
+                min-height: 40px;
+                padding: var(--ddd-spacing-1);
+                font-size: var(--ddd-font-size-4xs);
+            }
+
+            .days-header span {
+                padding: var(--ddd-spacing-1);
+                font-size: var(--ddd-font-size-4xs);
+                overflow: hidden;
+            }
+
+            .week-header {
+                margin-left: var(--ddd-spacing-1);
+                margin-right: var(--ddd-spacing-1);
+            }
+
+
+        }
+
     `];
     }
 
