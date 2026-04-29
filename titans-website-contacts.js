@@ -24,23 +24,23 @@ export class TitansWebsiteContacts extends DDDSuper(I18NMixin(LitElement)) {
         }
 
         .contact-card {
-            background: white;
-            border-radius: 16px;
-            padding: 24px;
+            background: var(--ddd-theme-default-white);
+            border-radius: var(--ddd-radius-sm);
+            padding: var(--ddd-spacing-6);
             display: grid;
-            gap: 16px;
+            gap: var(--ddd-spacing-4);
         }
 
         .row {
-            font-size: 12px;
-            color: black;
+            font-size: var(--ddd-font-size-4xs);
+            color: var(--ddd-theme-default-info);
 
         }
 
         .label {
             font-weight: 700;
-            color: black;
-            margin-right: 8px;
+            color: var(--ddd-theme-default-info);
+            margin-right: var(--ddd-spacing-2);
         }
         `,
     ];

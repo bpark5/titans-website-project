@@ -41,28 +41,28 @@ static get styles() {
       .stats-grid {
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-        gap: 16px;
+        gap: var(--ddd-spacing-4);
       }
 
       .stat-card {
-        background: white;
-        border-radius: 16px;
+        background: var(--ddd-theme-default-white);
+        border-radius: var(--ddd-radius-sm);
         overflow: hidden;
         text-align: center;
-        padding: 12px;
+        padding: var(--ddd-spacing-3);
       }
 
       .label {
-        margin-top: 10px;
+        margin-top: var(--ddd-spacing-3);
         font-weight: 700;
-        color: #333;
+        color: var(--ddd-theme-default-info);
       }
 
       .value {
-        font-size: 24px;
+        font-size: var(--ddd-font-size-s);
         font-weight: 700;
-        color: #4b92db;
-        margin-top: 4px;
+        color: var(--ddd-theme-default-accent);
+        margin-top: var(--ddd-spacing-1);
       }
       `,
     ];

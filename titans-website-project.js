@@ -47,13 +47,6 @@ export class TitansWebsiteProject extends DDDSuper(I18NMixin(LitElement)) {
     return [
       super.styles,
       css`
-        :host {
-          display: block;
-          background: #f7f7f7;
-          color: #111;
-          font-family: Arial, sans-serif;
-        }
-
         .page {
           max-width: 1200px;
           margin: 0 auto;
@@ -66,12 +59,12 @@ export class TitansWebsiteProject extends DDDSuper(I18NMixin(LitElement)) {
         }
 
         .section-title {
-          font-size: 1.5rem;
+          font-size: var(--ddd-font-size-m);
           font-weight: 700;
           padding-bottom: var(--ddd-spacing-3);
           color: light-dark(var(--ddd-theme-default-info), var(--ddd-theme-default-shrineLight));
           border-left: var(--ddd-border-lg);
-          border-color: light-dark(var(--ddd-theme-default-info), var(--ddd-theme-default-shrineLight));
+          border-color: var(--ddd-theme-default-accent);
           padding-left: var(--ddd-spacing-2);
           padding-bottom: var(--ddd-spacing-1);
           margin-bottom: var(--ddd-spacing-2);
