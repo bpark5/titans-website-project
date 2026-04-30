@@ -19,7 +19,7 @@ import "./titans-website-contacts.js";
 import "./titans-website-footer.js";
 import "./titans-website-about.js";
 import "./titans-website-dropdown-contacts.js";
-import "./titans-wbesite-roster.js";
+import "./titans-website-roster.js";
 
 /**
  * `titans-website-project`
