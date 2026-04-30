@@ -97,7 +97,7 @@ export class TitansWebsiteRoster extends DDDSuper(I18NMixin(LitElement)) {
                 }
                 .person-card,
                 .person-card img {
-                    with: 150px;
+                    width: 150px;
                 }
                 .person-card img {
                     height: 150px;
