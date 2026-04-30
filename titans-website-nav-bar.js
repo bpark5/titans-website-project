@@ -23,6 +23,8 @@ export class TitansWebsiteNavBar extends DDDSuper(I18NMixin(LitElement)) {
         this.logoSrc = "";
         this.logoDescription = "Team logo";
         this.menuOpen = false;
+        this.menuItems = [];
+        this.activeMenu = null;
     }
 
     static get properties() {
@@ -31,7 +33,9 @@ export class TitansWebsiteNavBar extends DDDSuper(I18NMixin(LitElement)) {
             title: { type: String },
             logoSrc: {type: String},
             logoDescription: {type: String},
-            menuOpen: {type: Boolean}
+            menuOpen: {type: Boolean},
+            menuItems: {type: Array},
+            activeMenu: {type: String}
         };
     }
 
@@ -50,6 +54,7 @@ export class TitansWebsiteNavBar extends DDDSuper(I18NMixin(LitElement)) {
             display: flex;
             align-items: center;
             padding: var(--ddd-spacing-5);
+            position: relative;
         }
         
         .logo-section img {
@@ -74,6 +79,8 @@ export class TitansWebsiteNavBar extends DDDSuper(I18NMixin(LitElement)) {
             border-color: var(--ddd-theme-default-accent);
             font-size: var(--ddd-font-size-ml);
             cursor: pointer;
+            max-width: 100%;
+            box-sizing: border-box;
         }
 
         .roster-button:hover .roster-button:focus{
@@ -85,32 +92,129 @@ export class TitansWebsiteNavBar extends DDDSuper(I18NMixin(LitElement)) {
             position: relative;
         }
 
-        .schedule-dropdown, .about-dropdown {
+        .dropdown-menu {
             display: none;
             position: absolute;
-            background: white;
-            max-width: 90%;
+            background: var(--ddd-theme-default-shrineLight);
+            min-width: 100%;
             z-index: 100;
         }
 
-        .dropdown-button:hover .schedule-dropdown,
-        .dropdown-button:focus-within .schedule-dropdown,
-        .dropdown-button:hover .about-dropdown,
-        .dropdown-button:focus-within .about-dropdown {
+        .dropdown-button:hover .dropdown-menu,
+        .dropdown-button:focus-within .dropdown-menu {
             display: flex;
             flex-direction: column;
         }
 
-        .schedule-dropdown a, .about-dropdown a {
+        .dropdown-menu a {
             font-size: var(--ddd-font-size-3xs);
             padding: var(--ddd-spacing-2);
             color: var(--ddd-theme-default-beaverBlue);
             border: var(--ddd-border-xs);
+            text-decoration: none;
         }
+
+        .dropdown-menu a:hover {
+            cursor: pointer;
+            background-color: var(--ddd-theme-default-limestoneLight);
+            text-decoration: underline;
+        }
+
+        .smaller-screen-menu {
+            display: none;
+        }
+
+        @media (max-width: 700px) {
+
+            .smaller-screen-menu {
+                display: block;
+                background: none;
+                border: none;
+                color: var(--ddd-theme-default-shrineLight);
+                font-size: var(--ddd-font-size-ml);
+                cursor: pointer;
+            }
+
+            .buttons {
+                display: none;
+                flex-direction: column;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                width: 100%;
+                max-width: 100%;
+                box-sizing: border-box;
+                height: auto;
+                background-color: var(--ddd-theme-default-beaverBlue);
+                padding: var(--ddd-spacing-5);
+                gap: var(--ddd-spacing-3);
+                overflow-y: auto;
+                z-index: 100;
+            }
+
+            .dropdown-button {
+                width: 100%;
+            }
+
+             .dropdown-button button {
+                color: light-dark(var(--ddd-theme-default-info), var(--ddd-theme-default-shrineLight));
+                background-color: light-dark(var(--ddd-theme-default-limestoneLight),var(--ddd-theme-default-nittanyNavy));
+                width: 100%;
+                font-size: var(--ddd-font-size-xs);
+                padding: var(--ddd-spacing-5);
+                text-align: left;
+                border-radius: var(--ddd-radius-sm);
+            }
+
+            .dropdown-button:hover .dropdown-menu,
+            .dropdown-button:focus-within .dropdown-menu {
+                display: none;
+            }
+
+            .dropdown-button.active .dropdown-menu {
+                display: flex;
+                flex-direction: column;
+            }
+
+            .buttons.open {
+                display: flex;
+            }
+
+            .dropdown-menu {
+                position: static;
+                display: none;
+                flex-direction: column;
+                width: 100%;
+                background: var(--ddd-theme-default-shrineLight);
+            }
+
+
+            .dropdown-menu a {
+                font-size: var(--ddd-font-size-3xs);
+                padding: var(--ddd-spacing-4);
+                border-bottom: var(--ddd-border-xs);
+            }
+        } 
     `];
     }
 
     render() {
+        const menuButtons = [];
+        for (const item of this.menuItems) {
+            const children = [];
+            for (const child of item.children) {
+                children.push(html`<a href="/?page=${child.slug}">${child.title}</a>`);
+            }
+            menuButtons.push(html`
+                <div class="dropdown-button ${this.activeMenu === item.id ? 'active' : ''}">
+                    <button @click=${() => this._toggleDropdown(item.id)}>${item.title}</button>
+                    <div class="dropdown-menu">
+                        ${children}
+                    </div>
+                </div>
+            `);
+        }
+
         return html`
         <div class="header">
             <div class="logo-section">
@@ -118,29 +222,29 @@ export class TitansWebsiteNavBar extends DDDSuper(I18NMixin(LitElement)) {
                     <img src=${this.logoSrc} alt=${this.logoDescription} />
                 </a>
             </div>
-            <div class="buttons">
-                <div class="dropdown-button">
-                    <button class="schedule-button">Schedule</button>
-                    <div class="schedule-dropdown">
-                        <a href="/?page=schedule">Schedule Page</a>
-                        <a href="/?page=schedule">Games</a>
-                        <a href="/?page=schedule">Practice</a>
-                    </div>
-                </div>
-                <button class="roster-button" @click=${() => window.location.href = '/?page=roster'}>Roster</button>
-                <div class="dropdown-button">
-                    <button class="about-button">About</button>
-                    <div class="about-dropdown">
-                        <a href="/?page=about">About Page</a>
-                        <a href="/?page=contact">Contact</a>
-                    </div>
-                </div>
-                
+            <button class="smaller-screen-menu" @click=${this._toggleMenu}>☰</button>
+            <div class="buttons ${this.menuOpen ? "open" : ""}">
+                ${menuButtons}
             </div>
         </div>
-
         `;
     }
+
+    connectedCallback() {
+        super.connectedCallback();
+        fetch("/api/menu").then (res => res.json()).then (data => {
+            this.menuItems = data.items;
+        });
+    }
+
+    _toggleMenu() {
+        this.menuOpen = !this.menuOpen;
+    }
+
+    _toggleDropdown(id) {
+        this.activeMenu = this.activeMenu === id ? null : id;
+    }
+
 }
 
 globalThis.customElements.define(TitansWebsiteNavBar.tag, TitansWebsiteNavBar);
