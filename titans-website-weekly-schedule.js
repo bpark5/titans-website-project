@@ -139,7 +139,24 @@ export class TitansWebsiteWeeklySchedule extends DDDSuper(I18NMixin(LitElement))
             border-color: var(--ddd-theme-default-accent);
         }
 
+        .short-day {
+            display: none;
+        }
+
+        .full-day {
+            display: block;
+        }
+
         @media (max-width: 950px) {
+
+            .short-day {
+                display: block;
+            }
+
+            .full-day {
+                display: none;
+            }
+            
             .week-grid, .days-header {
                 gap: 2px;
                 padding: var(--ddd-spacing-2);
@@ -213,13 +230,13 @@ export class TitansWebsiteWeeklySchedule extends DDDSuper(I18NMixin(LitElement))
                 </div>
             </div>
             <div class="days-header">
-                <span>Sunday</span>
-                <span>Monday</span>
-                <span>Tuesday</span>
-                <span>Wednesday</span>
-                <span>Thursday</span>
-                <span>Friday</span>
-                <span>Saturday</span>
+                <span class="full-day">Sunday</span> <span class="short-day">Sun</span>
+                <span class="full-day">Monday</span> <span class="short-day">M</span>
+                <span class="full-day">Tuesday</span> <span class="short-day">T</span>
+                <span class="full-day">Wednesday</span> <span class="short-day">W</span>
+                <span class="full-day">Thursday</span> <span class="short-day">Th</span>
+                <span class="full-day">Friday</span> <span class="short-day">F</span>
+                <span class="full-day">Saturday</span> <span class="short-day">Sat</span>
             </div>
             <div class="week-grid">
                 ${weekCells}
