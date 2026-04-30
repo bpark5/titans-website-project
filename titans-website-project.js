@@ -19,6 +19,7 @@ import "./titans-website-contacts.js";
 import "./titans-website-footer.js";
 import "./titans-website-about.js";
 import "./titans-website-dropdown-contacts.js";
+import "./titans-wbesite-roster.js";
 
 /**
  * `titans-website-project`
@@ -101,14 +102,8 @@ export class TitansWebsiteProject extends DDDSuper(I18NMixin(LitElement)) {
     }
     if (path === "roster") {
       return html `
-        <titans-website-nav-bar logoSrc="./images/Team-logo.png"></titans-website-nav-barlogoSrc></titans-website-nav-bar>
-        <div class="page">
-          <div class="section-card">
-            <div class="section-title">Team Roster</div>
-            <titans-website-pics></titans-website-pics>
-          </div>
-        </div>
-        <titans-website-footer></titans-website-footer>
+        <titans-website-roster></titans-website-roster>
+        
       `;
     }
     
