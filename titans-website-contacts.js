@@ -38,7 +38,7 @@ export class TitansWebsiteContacts extends DDDSuper(I18NMixin(LitElement)) {
         }
 
         .label {
-            font-weight: 700;
+            font-weight: var(--ddd-font-weight-bold);
             color: var(--ddd-theme-default-info);
             margin-right: var(--ddd-spacing-2);
         }

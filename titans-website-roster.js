@@ -84,14 +84,14 @@ export class TitansWebsiteRoster extends DDDSuper(I18NMixin(LitElement)) {
                 border-radius: var(--ddd-radius-sm);
             }
             .name {
-                font-weight: 700;
+                font-weight: var(--ddd-font-weight-bold);
                 font-size: var(--ddd-font-size-4xs);
                 margin-top: var(--ddd-spacing-2);
                 color: light-dark(var(--ddd-theme-default-info), var(--ddd-theme-default-shrineLight));;
             }
             .role {
                 font-size: var(--ddd-font-size-5);
-                font-weight: 500;
+                font-weight: var(--ddd-font-weight-medium);
                 color: light-dark(var(--ddd-theme-default-info), var(--ddd-theme-default-shrineLight));;
             }
             @media (max-width: 700px) {

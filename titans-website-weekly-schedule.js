@@ -66,11 +66,11 @@ export class TitansWebsiteWeeklySchedule extends DDDSuper(I18NMixin(LitElement))
         .days-header {
             display: grid;
             grid-template-columns: repeat(7, 1fr);
-            gap: 5px;
+            gap: var(--ddd-spacing-1);
             padding: var(--ddd-spacing-4);
-            padding-bottom: 0;
+            padding-bottom: var(--ddd-spacing-0);
             text-align: center;
-            font-weight: bold;
+            font-weight: var(--ddd-font-weight-bold);
             color: var(--ddd-theme-default-shrineLight);
         }
 
@@ -158,7 +158,7 @@ export class TitansWebsiteWeeklySchedule extends DDDSuper(I18NMixin(LitElement))
             }
             
             .week-grid, .days-header {
-                gap: 2px;
+                gap: var(--ddd-spacing-1);
                 padding: var(--ddd-spacing-2);
             }
 

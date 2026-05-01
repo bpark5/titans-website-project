@@ -140,7 +140,7 @@ export class TitansWebsiteNavBar extends DDDSuper(I18NMixin(LitElement)) {
                 flex-direction: column;
                 position: absolute;
                 top: 100%;
-                left: 0;
+                left: var(--ddd-spacing-0);
                 width: 100%;
                 max-width: 100%;
                 box-sizing: border-box;

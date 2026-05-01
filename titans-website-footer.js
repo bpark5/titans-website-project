@@ -31,12 +31,11 @@ export class TitansWebsiteFooter extends DDDSuper(I18NMixin(LitElement)) {
 
         .main {
             font-size: var(--ddd-font-size-3xs);
-            font-weight: 700;
+            font-weight: var(--ddd-font-weight-bold);
             margin-bottom: var(--ddd-spacing-2);
         }
         .sub {
             font-size: var(--ddd-font-size-4xs);
-            font-weight: 400;
             opacity: 0.8;
         }
         `,

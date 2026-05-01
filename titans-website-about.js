@@ -44,7 +44,7 @@ export class TitansWebsiteAbout extends DDDSuper(I18NMixin(LitElement)) {
 
         .section-title {
             
-            font-weight: bold;
+            font-weight: var(--ddd-font-weight-bold);
             margin-bottom: var(--ddd-spacing-3);
             color: light-dark(var(--ddd-theme-default-info), var(--ddd-theme-default-shrineLight));
         }
@@ -87,7 +87,6 @@ export class TitansWebsiteAbout extends DDDSuper(I18NMixin(LitElement)) {
         }
         titans-website-footer {
             display: block;
-            //margin-top: var(--ddd-spacing-5);
         }
     `,
     ];

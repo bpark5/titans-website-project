@@ -36,31 +36,30 @@ export class TitansWebsiteSocials extends DDDSuper(I18NMixin(LitElement)) {
       super.styles,
       css`
       :host {
-        display: block;
+          display: block;
       }
       .socials {
-        display: flex;
-        flex-wrap: wrap;
-        gap: var(--ddd-spacing-4);
-        justify-content: flex-start;
-        align-items: center;
-        padding-bottom: var(--ddd-spacing-4);
+          display: flex;
+          flex-wrap: wrap;
+          gap: var(--ddd-spacing-4);
+          justify-content: flex-start;
+          align-items: center;
+          padding-bottom: var(--ddd-spacing-4);
       }
 
       .socials a {
-        display: inline-flex;
-        align-items: center;
-        justify-content: center;
-        width: fit-content;
-        text-decoration: none;
-        color: inherit;
-        background: var(--ddd-theme-default-accent);
-        color: var(--ddd-theme-default-info);
-        padding: var(--ddd-spacing-3) var(--ddd-spacing-5);
-        border-radius: 999px;
-        font-weight: 700;
-        transition: 0.2s ease;
-        min-width: 140px;
+          display: inline-flex;
+          align-items: center;
+          justify-content: center;
+          width: fit-content;
+          text-decoration: none;
+          background: var(--ddd-theme-default-accent);
+          color: var(--ddd-theme-default-info);
+          padding: var(--ddd-spacing-3) var(--ddd-spacing-5);
+          border-radius: var(--ddd-radius-rounded);
+          font-weight: var(--ddd-font-weight-bold);
+          transition: 0.2s ease;
+          min-width: 140px;
         }
 
     .socials a:hover {

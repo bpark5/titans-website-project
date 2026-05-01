@@ -49,10 +49,10 @@ export class TitansWebsiteSlideArrow extends DDDSuper(I18NMixin(LitElement)) {
       }
 
         .left-arrow, .right-arrow {
-            background-color: var(--ddd-theme-default-white);
-            color: var(--ddd-theme-default-link);
+            background-color: light-dark(var(--ddd-theme-default-shrineLight), var(--ddd-theme-default-nittanyNavy));
+            color: light-dark(var(--ddd-theme-default-nittanyNavy), var(--ddd-theme-default-shrineLight));
             border: var(--ddd-border-md);
-            border-color: var(--ddd-theme-default-link);
+            border-color: light-dark(var(--ddd-theme-default-nittanyNavy), var(--ddd-theme-default-shrineLight));
             padding: var(--ddd-spacing-1) var(--ddd-spacing-3);
             border-radius: var(--ddd-radius-circle);
             font-size: var(--ddd-font-size-xs);

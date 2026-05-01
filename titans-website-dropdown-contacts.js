@@ -81,7 +81,7 @@ export class TitansWebsiteDropdownContacts extends DDDSuper(I18NMixin(LitElement
             margin-bottom: var(--ddd-spacing-2);
         }
         .role {
-            font-weight: 700;
+            font-weight: var(--ddd-font-weight-bold);
             margin-bottom: var(--ddd-spacing-2);
         }
         .contact-info {
@@ -91,7 +91,7 @@ export class TitansWebsiteDropdownContacts extends DDDSuper(I18NMixin(LitElement
         a {
             color: var(--ddd-theme-default-beaverBlue);
             text-decoration: none;
-            font-weight: 700;
+            font-weight: var(--ddd-font-weight-bold);
         }
         a:hover {
             text-decoration: underline;

@@ -54,13 +54,13 @@ static get styles() {
 
       .label {
         margin-top: var(--ddd-spacing-3);
-        font-weight: 700;
+        font-weight: var(--ddd-font-weight-bold);
         color: var(--ddd-theme-default-info);
       }
 
       .value {
         font-size: var(--ddd-font-size-s);
-        font-weight: 700;
+        font-weight: var(--ddd-font-weight-bold);
         color: var(--ddd-theme-default-accent);
         margin-top: var(--ddd-spacing-1);
       }

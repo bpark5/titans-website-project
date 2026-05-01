@@ -51,7 +51,7 @@ export class TitansWebsiteProject extends DDDSuper(I18NMixin(LitElement)) {
         .page {
           max-width: 1200px;
           margin: 0 auto;
-          padding: 24px;
+          padding: var(--ddd-spacing-6);
         }
 
         .section-card {
@@ -61,7 +61,7 @@ export class TitansWebsiteProject extends DDDSuper(I18NMixin(LitElement)) {
 
         .section-title {
           font-size: var(--ddd-font-size-m);
-          font-weight: 700;
+          font-weight: var(--ddd-font-weight-bold);
           padding-bottom: var(--ddd-spacing-3);
           color: light-dark(var(--ddd-theme-default-info), var(--ddd-theme-default-shrineLight));
           border-left: var(--ddd-border-lg);

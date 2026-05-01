@@ -60,17 +60,17 @@ export class TitansWebsitePics extends DDDSuper(I18NMixin(LitElement)) {
       .grid {
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-        gap: 16px;
+        gap: var(--ddd-spacing-4);
         width: 100%;
         
       }
 
       .card {
         background: var(--ddd-theme-default-white);
-        border-radius: 16px;
+        border-radius: var(--ddd-radius-lg);
         overflow: hidden;
         text-align: center;
-        padding: 12px;
+        padding: var(--ddd-spacing-3);
         min-width: 0;
       }
 
@@ -80,14 +80,14 @@ export class TitansWebsitePics extends DDDSuper(I18NMixin(LitElement)) {
         object-fit: contain;
         object-position: center;
         background: var(--ddd-theme-default-white);
-        border-radius: 12px;
+        border-radius: var(--ddd-radius-md);
         display: block;
       }
 
       .label {
-        margin-top: 10px;
-        font-weight: 700;
-        color: #333;
+        margin-top: var(--ddd-spacing-3);
+        font-weight: var(--ddd-font-weight-bold);
+        color: var(--ddd-theme-default-info);
       }
 
       @media (max-width: 900px) {
