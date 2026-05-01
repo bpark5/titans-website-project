@@ -60,8 +60,8 @@ export class TitansWebsitePlayListSlide extends DDDSuper(I18NMixin(LitElement)) 
         .slide-image img {
             display: block;
             width: 92%;
-            height: 92%;
-            object-fit: contain;
+            height: 350px;
+            object-fit: cover;
             object-position: center;
             margin-left: auto;
             margin-right: auto;
@@ -69,20 +69,8 @@ export class TitansWebsitePlayListSlide extends DDDSuper(I18NMixin(LitElement)) 
             border-color: light-dark(var(--ddd-theme-default-nittanyNavy), var(--ddd-theme-default-accent));
             border-radius: var(--ddd-radius-lg);
             overflow: hidden;
-            border: none;
         }
-        .image-frame {
-            width: 600px;
-            height: 350px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            border:  var(--ddd-border-md);
-            border-color: light-dark(var(--ddd-theme-default-nittanyNavy), var(--ddd-theme-default-accent));
-            
-            border-radius: var(--ddd-radius-sm);
-            background: light-dark(var(--ddd-theme-default-nittanyNavy), var(--ddd-theme-default-accent));
-        }
+        
         @media (max-width: 700px) {
             .slide-image img {
                 width: 95%;
