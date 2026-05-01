@@ -51,15 +51,15 @@ render() {
         <div class="contact-card">
             <div class="row">
                 <span class="label">Name:</span>
-                <span>John Doe</span>
+                <span>Chris Higgins</span>
             </div>
             <div class="row">
                 <span class="label">Email:</span>
-                <span>john.doe@example.com</span>
+                <span>chris.higgins@titans.com</span>
             </div>
             <div class="row">
                 <span class="label">Phone:</span>
-                <span>+1 234 567 890</span>
+                <span>555-123-4567</span>
             </div>
         </div>
     `;
