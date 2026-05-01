@@ -85,7 +85,7 @@ export class TitansWebsitePlayListSlide extends DDDSuper(I18NMixin(LitElement)) 
         return html `
         <div class="slide-image">
             <div class="image-frame">
-            <img src=${this.slideImage} alt=${this.imageDescription} loading="lazy">
+            <img src=${this.slideImage} alt=${this.imageDescription}>
         </div>
         </div>
         `;
