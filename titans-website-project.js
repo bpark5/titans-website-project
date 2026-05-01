@@ -19,6 +19,7 @@ import "./titans-website-contacts.js";
 import "./titans-website-footer.js";
 import "./titans-website-about.js";
 import "./titans-website-dropdown-contacts.js";
+import "./titans-website-roster.js";
 
 /**
  * `titans-website-project`
@@ -101,14 +102,7 @@ export class TitansWebsiteProject extends DDDSuper(I18NMixin(LitElement)) {
     }
     if (path === "roster") {
       return html `
-        <titans-website-nav-bar logoSrc="./images/Team-logo.png"></titans-website-nav-barlogoSrc></titans-website-nav-bar>
-        <div class="page">
-          <div class="section-card">
-            <div class="section-title">Team Roster</div>
-            <titans-website-pics></titans-website-pics>
-          </div>
-        </div>
-        <titans-website-footer></titans-website-footer>
+        <titans-website-roster></titans-website-roster>
       `;
     }
     
@@ -118,8 +112,10 @@ export class TitansWebsiteProject extends DDDSuper(I18NMixin(LitElement)) {
           logoSrc="./images/Team-logo.png">
         </titans-website-nav-bar>
         <titans-website-play-list>
-          <titans-website-play-list-slide slideImage="https://encrypted-tbn2.gstatic.com/licensed-image?q=tbn:ANd9GcRIiww5ye8cvdDtVB1SJC8Lp7TL8nxBSlaTvCMTxkhm8afn5fVAPWYEZb3D6xNUkuds07FPw2lkCuCSa-Q"></titans-website-play-list-slide>
-          <titans-website-play-list-slide slideImage="https://a57.foxnews.com/static.foxnews.com/foxnews.com/content/uploads/2026/03/1200/675/paul-skenes-opening-day-1.jpg?ve=1&tl=1"></titans-website-play-list-slide>
+          <titans-website-play-list-slide slideImage="./images/team-breakdown.png"></titans-website-play-list-slide>
+          <titans-website-play-list-slide slideImage="./images/hitting-action.png"></titans-website-play-list-slide>
+          <titans-website-play-list-slide slideImage="./images/catcher-action.png"></titans-website-play-list-slide>
+          <titans-website-play-list-slide slideImage="./images/throwing-action.png"></titans-website-play-list-slide>
         </titans-website-play-list>
         <titans-website-weekly-schedule></titans-website-weekly-schedule>
           <div class="section">
