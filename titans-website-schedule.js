@@ -148,6 +148,8 @@ export class TitansWebsiteSchedule extends DDDSuper(I18NMixin(LitElement)) {
                 min-height: 40px;
                 padding: var(--ddd-spacing-1);
                 font-size: var(--ddd-font-size-4xs);
+                overflow: hidden;
+                word-break: break-word;
             }
 
             .days-header span {
