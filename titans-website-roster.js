@@ -127,7 +127,7 @@ export class TitansWebsiteRoster extends DDDSuper(I18NMixin(LitElement)) {
         <div class="page">
             <h1>Meet the Team</h1>
             <div class="subtitle">Get to know the players and coaches who make up our roster.</div>
-            <h2>Players</h2>
+            <h2>Notable Players</h2>
             <div class="roster-grid">
                 ${this.players.map(player => this.renderPerson(player))}
                 </div>
